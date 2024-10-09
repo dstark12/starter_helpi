@@ -1,5 +1,10 @@
 # Getting Started with Helpi
 
+Dustin Stark
+John Wiseniewski
+Don Lafferty
+Zachariah Sollenberger
+
 Packages Included:
 * npm
 * bootstrap
