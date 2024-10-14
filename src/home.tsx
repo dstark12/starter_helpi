@@ -5,18 +5,6 @@ import { Button } from "react-bootstrap";
 
 
 export function Home(): React.JSX.Element {
-    // Function to handle button clicks
-    const handleBQuestions = () => {
-        // Logic for handling Bquestions, e.g., navigating to the component or displaying it
-        console.log("Bquestions clicked");
-        // You might want to set state here or navigate to another page.
-    };
-
-    const handleDQuestions = () => {
-        // Logic for handling Dquestions
-        console.log("Dquestions clicked");
-        // Similar logic as above.
-    };
     const [page, setPage] = useState<string>("home");
 
     return (
