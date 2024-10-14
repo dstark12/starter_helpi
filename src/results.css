@@ -1,0 +1,92 @@
+/* Base styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .results-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Main content styling */
+  .main-content {
+    padding: 20px;
+  }
+  
+  .career-section {
+    margin-bottom: 20px;
+  }
+  
+  .career-section h2 {
+    color: #333;
+  }
+  
+  .career-section span {
+    color: #007bff;
+  }
+  
+  /* Graph section styling */
+  .graph-section {
+    margin-bottom: 20px;
+  }
+  
+  .graph {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  
+  .bar-container {
+    text-align: center;
+  }
+  
+  .bar {
+    width: 40px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+  }
+  
+  .bar-label {
+    position: absolute;
+    bottom: 5px;
+  }
+  
+  .bar-title {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Alternatives section styling */
+  .alternatives-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  /* Footer styling */
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+  }
