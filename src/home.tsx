@@ -1,6 +1,6 @@
 import React from 'react';
-import { Bquestions } from './bquestions';
-import { Dquestions } from './dquestions';
+//import { Bquestions } from './bquestions';
+//import { Dquestions } from './dquestions';
 
 export function Home(): React.JSX.Element {
     // Function to handle button clicks
