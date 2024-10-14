@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
-import { Home} from './home';
+import { Home } from './home';
+import { Bquestions } from './bquestions';
+import { Dquestions } from './dquestions';
+
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -34,7 +37,14 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <span>
+          <Button onClick={()=>{setPage("home")}}>Home</Button>
+          <Button onClick={()=>{setPage("bquestions")}}>Basic Questions</Button>
+          <Button onClick={()=>{setPage("dquestions")}}>Detailed Questions</Button>
+        </span>
         {page === "home"? <Home/> : null}
+        {page === "bquestions"? <Bquestions/>: null}
+        {page === "dquestions"? <Dquestions/>: null}
         <a
           className="App-link"
           href="https://reactjs.org"
