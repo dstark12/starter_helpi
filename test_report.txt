@@ -2,35 +2,24 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-PASS src/App.test.tsx
-  ✓ renders learn react link (40 ms)
 
---------------------|---------|----------|---------|---------|-------------------
-File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
---------------------|---------|----------|---------|---------|-------------------
-All files           |   23.52 |    33.33 |    8.69 |      24 |                   
- App.tsx            |      50 |       50 |   16.66 |      50 | 15,25-31,41-43    
- bquestions.tsx     |   15.38 |      100 |       0 |   16.66 | 20-44             
- dquestions.tsx     |       0 |      100 |       0 |       0 | 4                 
- home.tsx           |      60 |      100 |   33.33 |      60 | 9,15              
- index.tsx          |       0 |      100 |     100 |       0 | 7-19              
- reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- results.tsx        |       0 |      100 |       0 |       0 | 4-53              
---------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
-Snapshots:   0 total
-Time:        3.158 s
-Ran all test suites.
-[0;33mOne of your dependencies, babel-preset-react-app, is importing the
-"@babel/plugin-proposal-private-property-in-object" package without
-declaring it in its dependencies. This is currently working because
-"@babel/plugin-proposal-private-property-in-object" is already in your
-node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
+<--- Last few GCs --->
 
-babel-preset-react-app is part of the create-react-app project, [1mwhich
-is not maintianed anymore[0;33m. It is thus unlikely that this bug will
-ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
-your devDependencies to work around this error. This will make this message
-go away.[0m
-  
+[1864:0x5323200]    46822 ms: Scavenge 4018.9 (4131.6) -> 4017.4 (4133.1) MB, 6.8 / 0.0 ms  (average mu = 0.672, current mu = 0.572) allocation failure 
+[1864:0x5323200]    46840 ms: Scavenge 4020.5 (4133.1) -> 4018.7 (4141.9) MB, 7.3 / 0.0 ms  (average mu = 0.672, current mu = 0.572) allocation failure 
+[1864:0x5323200]    49758 ms: Mark-sweep 4026.0 (4142.4) -> 4019.9 (4145.9) MB, 2887.5 / 0.0 ms  (average mu = 0.428, current mu = 0.048) allocation failure scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb090e0 node::Abort() [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 2: 0xa1b70e  [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 3: 0xce1a20 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 4: 0xce1dc7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 5: 0xe99435  [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 6: 0xea90fd v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 7: 0xeabdfe v8::internal::Heap::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 8: 0xe6d33a v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+ 9: 0x11e61e6 v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
+10: 0x15d9e59  [/opt/hostedtoolcache/node/16.20.2/x64/bin/node]
