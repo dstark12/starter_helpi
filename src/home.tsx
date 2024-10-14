@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import { Bquestions } from './bquestions';
-// import { Dquestions } from './dquestions';
+import { Bquestions } from './bquestions';
+import { Dquestions } from './dquestions';
 import { Button } from "react-bootstrap";
 
 
@@ -15,6 +15,9 @@ export function Home(): React.JSX.Element {
                 <Button onClick={()=>{setPage("bquestions")}}>Basic Questions</Button>
                 <Button onClick={()=>{setPage("dquestions")}}>Detailed Questions</Button>
                 </div>
+                {page === "home"? <Home/> : null}
+         {page === "bquestions"? <Bquestions/>: null}
+        {page === "dquestions"? <Dquestions/>: null}
             </header>
         </div>
     );
