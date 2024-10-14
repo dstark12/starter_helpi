@@ -6,7 +6,7 @@ interface Question {
   questionText: string;
 }
 
-const questions: Question[] = [
+export const questions: Question[] = [
   { id: 1, questionText: 'Do you enjoy working with technology or using computers?' },
   { id: 2, questionText: 'Are you interested in creative tasks like designing, writing, or creating things?' },
   { id: 3, questionText: 'Do you prefer working with people more than working alone?' },
@@ -16,7 +16,7 @@ const questions: Question[] = [
   { id: 7, questionText: 'Would you be comfortable with a career that requires frequent travel or relocation?' },
 ];
 
-const Bquestions: React.FC = () => {
+export const Bquestions: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
   const handleAnswerClick = (id: number, answer: string) => {

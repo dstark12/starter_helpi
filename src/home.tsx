@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { bQuestions } from './bquestions';
-import { dQuestions } from './dquestions';
+import { Bquestions } from './bquestions';
+import { Dquestions } from './dquestions';
 
 
 export function Home() : React.JSX.Element {
     return <div>
         <header>
             <button
-            onClick={bQuestions}>
+            onClick={Bquestions}>
             </button>
             <button
-            onClick={dQuestions}>
+            onClick={Dquestions}>
             </button>
         </header>
         <header>
