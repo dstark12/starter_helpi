@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 interface Question {
   id: number;
   questionText: string;
@@ -15,7 +16,7 @@ const questions: Question[] = [
   { id: 7, questionText: 'Would you be comfortable with a career that requires frequent travel or relocation?' },
 ];
 
-const BQuestions: React.FC = () => {
+const Bquestions: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
   const handleAnswerClick = (id: number, answer: string) => {
@@ -49,4 +50,5 @@ const BQuestions: React.FC = () => {
   );
 };
 
-export default BQuestions;
+export default Bquestions;
+
