@@ -8,18 +8,19 @@ PASS src/App.test.tsx
 --------------------|---------|----------|---------|---------|-------------------
 File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 --------------------|---------|----------|---------|---------|-------------------
-All files           |      25 |    16.66 |    12.5 |      25 |                   
+All files           |      24 |    16.66 |   11.11 |      24 |                   
  App.tsx            |      60 |       50 |   33.33 |      60 | 11,19-25          
  bquestions.tsx     |       0 |      100 |       0 |       0 | 4                 
  dquestions.tsx     |       0 |      100 |       0 |       0 | 4                 
- home.tsx           |       0 |      100 |       0 |       0 | 5                 
+ home.tsx           |       0 |      100 |       0 |       0 | 7                 
  index.tsx          |       0 |      100 |     100 |       0 | 7-19              
  reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
+ results.tsx        |       0 |      100 |       0 |       0 | 4                 
 --------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        2.826 s
+Time:        2.974 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
