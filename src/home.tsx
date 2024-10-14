@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
+import { Button } from "react-bootstrap";
 
 export function Home(): React.JSX.Element {
     // Function to handle button clicks
@@ -15,17 +16,16 @@ export function Home(): React.JSX.Element {
         console.log("Dquestions clicked");
         // Similar logic as above.
     };
+    const [page, setPage] = useState<string>("home");
 
     return (
         <div>
             <header>
                 <h1>Super Fun Career Quiz</h1>
                 <div>
-                    <button onClick={handleBQuestions}>
-                        Go to B Questions
-                    </button>
+                <Button onClick={()=>{setPage("bquestions")}}>Basic Questions</Button>
                     <button onClick={handleDQuestions}>
-                        Go to D Questions
+                        Go to Detailed Questions
                     </button>
                 </div>
             </header>

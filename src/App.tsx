@@ -33,10 +33,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
         <span>
           <Button onClick={()=>{setPage("home")}}>Home</Button>
           <Button onClick={()=>{setPage("bquestions")}}>Basic Questions</Button>
@@ -45,14 +41,6 @@ function App() {
         {page === "home"? <Home/> : null}
         {page === "bquestions"? <Bquestions/>: null}
         {page === "dquestions"? <Dquestions/>: null}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
