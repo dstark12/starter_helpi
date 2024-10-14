@@ -1,2 +1,5 @@
 import React, { useState } from 'react';
-export {};
+
+export function bQuestions() : React.JSX.Element {
+    return <div></div>
+};
