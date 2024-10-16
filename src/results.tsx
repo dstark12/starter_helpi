@@ -72,6 +72,7 @@ export const Results = () => {
   // Example career data
   const mainCareer = "Software Engineer";
   const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
+  const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const graphData = [
     { label: 'Software Engineer', score: 80, questions: 7 }, // 7 questions aligned with Software Engineer
     { label: 'Data Scientist', score: 65, questions: 5 },    // 5 questions aligned with Data Scientist
@@ -91,31 +92,12 @@ export const Results = () => {
           <p>Based on your quiz results, a <strong>{mainCareer}</strong> seems to be the best fit for you!</p>
         </section>
 
-        {/* Quiz Score Breakdown Section */}
-        <section className="graph-section">
-          <h3>Quiz Score Breakdown</h3>
-          <div className="graph">
-            {graphData.map((data, index) => (
-              <div key={index} className="bar-container">
-                <div
-                  className="bar"
-                  style={{ height: `${data.score}%` }}
-                  title={`${data.label}: ${data.score}%`}
-                >
-                  <span className="bar-label">{data.score}%</span>
-                </div>
-                <p className="bar-title">{data.label}</p>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Detailed Graphs for Each Career */}
         <section className="detailed-graphs-section">
-          <h3>Why These Careers Were Chosen:</h3>
+          <h3>Top 3 Careers And Why: </h3>
           {graphData.map((data, index) => (
             <div key={index} className="career-detail">
-              <h4>{data.label}</h4>
               <p>{data.questions} of your answers indicated interest in {data.label}.</p>
               <div className="detail-graph">
                 <div
@@ -129,13 +111,12 @@ export const Results = () => {
           ))}
         </section>
 
-        {/* Alternative Careers Section */}
+        {/* other Careers Section */}
         <section className="alternatives-section">
           <h3> 
-            co
-            Alternative Career Options:</h3>
+            Even More Career Options:</h3>
           <ul>
-            {alternativeCareers.map((career, index) => (
+            {otherCareers.map((career, index) => (
               <li key={index}>{career}</li>
             ))}
           </ul>
