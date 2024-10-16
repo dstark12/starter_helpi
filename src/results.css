@@ -1,92 +1,141 @@
 /* Base styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-  .results-container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  /* Header styling */
-  .header {
-    text-align: center;
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-  }
-  
-  /* Main content styling */
-  .main-content {
-    padding: 20px;
-  }
-  
-  .career-section {
-    margin-bottom: 20px;
-  }
-  
-  .career-section h2 {
-    color: #333;
-  }
-  
-  .career-section span {
-    color: #007bff;
-  }
-  
-  /* Graph section styling */
-  .graph-section {
-    margin-bottom: 20px;
-  }
-  
-  .graph {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    gap: 20px;
-  }
-  
-  .bar-container {
-    text-align: center;
-  }
-  
-  .bar {
-    width: 40px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-  }
-  
-  .bar-label {
-    position: absolute;
-    bottom: 5px;
-  }
-  
-  .bar-title {
-    margin-top: 5px;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  /* Alternatives section styling */
-  .alternatives-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  /* Footer styling */
-  .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.results-container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+}
+
+/* Main content styling */
+.main-content {
+  padding: 20px;
+}
+
+.career-section {
+  margin-bottom: 20px;
+}
+
+.career-section h2 {
+  color: #333;
+}
+
+.career-section span {
+  color: #007bff;
+}
+
+.career-section p {
+  color: #000;
+}
+
+/* Text color for why careers were chosen */
+.career-detail p {
+  color: #000; /* Black text for career explanation */
+}
+
+/* Graph section styling */
+.graph-section {
+  margin-bottom: 20px;
+}
+
+.graph {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.bar-container {
+  text-align: center;
+}
+
+.bar {
+  width: 40px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  transition: height 0.3s ease-in-out;  /* Smooth height change for bar graphs */
+}
+
+.bar-label {
+  position: absolute;
+  bottom: 5px;
+}
+
+.bar-title {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Detailed graph section styling for each career */
+.detailed-graphs-section {
+  margin-bottom: 30px;
+}
+
+.career-detail {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.career-detail h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.detail-graph {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.detail-bar {
+  background-color: #007bff;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: width 0.3s ease-in-out;  /* Smooth width change for horizontal bars */
+}
+
+.detail-bar-label {
+  padding: 5px;
+}
+
+/* Alternatives section styling */
+.alternatives-section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color:#000
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+}

@@ -69,13 +69,13 @@ import React from 'react';
 import './results.css';
 
 export const Results = () => {
-  // Defining example career data
+  // Example career data
   const mainCareer = "Software Engineer";
   const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
   const graphData = [
-    { label: 'Software Engineer', score: 80 },
-    { label: 'Data Scientist', score: 65 },
-    { label: 'Cybersecurity Analyst', score: 50 },
+    { label: 'Software Engineer', score: 80, questions: 7 }, // 7 questions aligned with Software Engineer
+    { label: 'Data Scientist', score: 65, questions: 5 },    // 5 questions aligned with Data Scientist
+    { label: 'Cybersecurity Analyst', score: 50, questions: 4 } // 4 questions aligned with Cybersecurity Analyst
   ];
 
   return (
@@ -91,7 +91,7 @@ export const Results = () => {
           <p>Based on your quiz results, a <strong>{mainCareer}</strong> seems to be the best fit for you!</p>
         </section>
 
-        {/* Graph Section */}
+        {/* Quiz Score Breakdown Section */}
         <section className="graph-section">
           <h3>Quiz Score Breakdown</h3>
           <div className="graph">
@@ -110,9 +110,30 @@ export const Results = () => {
           </div>
         </section>
 
+        {/* Detailed Graphs for Each Career */}
+        <section className="detailed-graphs-section">
+          <h3>Why These Careers Were Chosen:</h3>
+          {graphData.map((data, index) => (
+            <div key={index} className="career-detail">
+              <h4>{data.label}</h4>
+              <p>{data.questions} of your answers indicated interest in {data.label}.</p>
+              <div className="detail-graph">
+                <div
+                  className="detail-bar"
+                  style={{ width: `${data.questions * 15}%` }} // Adjust bar width to better visualize number of questions
+                >
+                  <span className="detail-bar-label">{data.questions} questions</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+
         {/* Alternative Careers Section */}
         <section className="alternatives-section">
-          <h3>Alternative Career Options:</h3>
+          <h3> 
+            co
+            Alternative Career Options:</h3>
           <ul>
             {alternativeCareers.map((career, index) => (
               <li key={index}>{career}</li>
