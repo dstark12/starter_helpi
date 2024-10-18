@@ -3,9 +3,11 @@ import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
 import { Button } from "react-bootstrap";
 
-export function Home(): React.JSX.Element {
-    const [page, setPage] = useState<string>("home");
 
+
+export function Home({setPage}: {setPage: (page: string) => void}): React.JSX.Element {
+    //const [page, setPage] = useState<string>("home");
+/*
     const renderPage = () => {
         switch (page) {
             case "bquestions":
@@ -16,6 +18,7 @@ export function Home(): React.JSX.Element {
                 return <p>Welcome to the Super Fun Career Quiz! Please select a quiz type.</p>;
         }
     };
+*/
 
     return (
         <div>
@@ -27,7 +30,7 @@ export function Home(): React.JSX.Element {
                 </div>
             </header>
             <main>
-                {renderPage()}  {/* Render the correct page based on state */}
+            <p>Welcome to the Super Fun Career Quiz! Please select a quiz type.</p>  
             </main>
         </div>
     );

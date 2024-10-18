@@ -35,7 +35,7 @@ function App() {
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
           <Button onClick={() => setPage("results")}>Results</Button> {/* Add Results Button */}
         </span>
-        {page === "home" ? <Home /> : null}
+        {page === "home" ? <Home setPage={setPage}/> : null}
         {page === "bquestions" ? <Bquestions /> : null}
         {page === "dquestions" ? <Dquestions /> : null}
         {page === "results" ? <Results /> : null} {/* Add Results Page */}
