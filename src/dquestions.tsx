@@ -47,6 +47,7 @@ export const Dquestions: React.FC = () => {
           </div>
         ))}
       </div>
+      <button onClick={getResults}>Go To Next Page</button>
     </div>
   );
 };
