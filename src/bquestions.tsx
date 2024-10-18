@@ -16,9 +16,10 @@ export const questions: Question[] = [
   { id: 7, questionText: 'Would you be comfortable with a career that requires frequent travel or relocation?' },
 ];
 
-export const Bquestions: React.FC = () => {
+export function Bquestions({setPage}: {setPage: (page: string) => void}): React.JSX.Element {
+  
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  const [page, setPage] = useState<string>("home");
+  
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
