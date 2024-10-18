@@ -5,7 +5,7 @@ import './results.css';
 export function Results(): React.JSX.Element {
   // Example career data
   const mainCareer = "Software Engineer";
-  const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
+  //const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
   const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const graphData = [
     { label: 'Software Engineer', score: 80, questions: 7 }, // 7 questions aligned with Software Engineer
