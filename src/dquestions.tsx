@@ -47,7 +47,6 @@ export const Dquestions: React.FC = () => {
           </div>
         ))}
       </div>
-      <button onClick={getResults}>Get Answer</button>
     </div>
   );
 };
