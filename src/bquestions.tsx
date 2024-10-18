@@ -18,13 +18,23 @@ export const questions: Question[] = [
 
 export const Bquestions: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-
+  const [page, setPage] = useState<string>("home");
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [id]: answer,
     }));
   };
+
+
+  const getButtonStyle = (questionId: number, answer: string) => {
+    if (answers[questionId] === answer) {
+      return { backgroundColor: 'blue', color: 'white' }; // Change background to blue if clicked
+    }
+    return {}; // Default style
+  };
+  
+
 
   const getResults = () => {
     // This can be where results are processed or API interaction can take place
@@ -39,13 +49,14 @@ export const Bquestions: React.FC = () => {
         {questions.map((q) => (
           <div key={q.id} className="question-item">
             <p>{q.questionText}</p>
-            <button onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
-            <button onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
-            <button onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
+            <button style={getButtonStyle(q.id, 'Yes')} onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
+            <button style={getButtonStyle(q.id, 'IDK')} onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
+            <button style={getButtonStyle(q.id, 'No')} onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
           </div>
         ))}
       </div>
       <button onClick={getResults}>Get Answer</button>
+      <button onClick={() => setPage('home')}>Go Back to Home</button>
     </div>
   );
 };
