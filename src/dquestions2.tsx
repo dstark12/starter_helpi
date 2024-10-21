@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dquestions from './dquestions'; // Import the first detailed questions page
+import Results from './results'; // Import the results page
 
 interface DetailedQuestion {
   id: number;
@@ -21,7 +22,7 @@ export const detailedQuestions2: DetailedQuestion[] = [
 
 const DQuestions2: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  const [page, setPage] = useState<'firstPage' | 'secondPage'>('secondPage'); // Use state to manage page transitions
+  const [page, setPage] = useState<'firstPage' | 'secondPage' | 'results'>('secondPage'); // Use state to manage page transitions
 
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
@@ -34,8 +35,16 @@ const DQuestions2: React.FC = () => {
     setPage('firstPage'); // Update the state to navigate back to the first page
   };
 
+  const goToResults = () => {
+    setPage('results'); // Update the state to navigate to the results page
+  };
+
   if (page === 'firstPage') {
     return <Dquestions />; // Render the first page when the "Previous Page" button is clicked
+  }
+
+  if (page === 'results') {
+    return <Results />; // Render the results page when the "See Results" button is clicked
   }
 
   return (
@@ -53,6 +62,9 @@ const DQuestions2: React.FC = () => {
       </div>
       {/* Previous Page button */}
       <button onClick={goBackToPreviousPage}>Previous Page</button> {/* Navigate back to the first page */}
+
+      {/* See Results button */}
+      <button onClick={goToResults}>See Results</button> {/* Navigate to the results page */}
     </div>
   );
 };

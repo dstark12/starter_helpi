@@ -1,8 +1,7 @@
-
 import React from 'react';
 import './results.css';
 
-export function Results(): React.JSX.Element {
+export const Results: React.FC = () => {
   // Example career data
   const mainCareer = "Software Engineer";
   //const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
@@ -26,7 +25,6 @@ export function Results(): React.JSX.Element {
           <p>Based on your quiz results, a <strong>{mainCareer}</strong> seems to be the best fit for you!</p>
         </section>
 
-
         {/* Detailed Graphs for Each Career */}
         <section className="detailed-graphs-section">
           <h3>Top 3 Careers And Why: </h3>
@@ -47,8 +45,7 @@ export function Results(): React.JSX.Element {
 
         {/* other Careers Section */}
         <section className="alternatives-section">
-          <h3> 
-            Even More Career Options:</h3>
+          <h3>Even More Career Options:</h3>
           <ul>
             {otherCareers.map((career, index) => (
               <li key={index}>{career}</li>
@@ -64,3 +61,6 @@ export function Results(): React.JSX.Element {
     </div>
   );
 };
+
+// Add default export
+export default Results;
