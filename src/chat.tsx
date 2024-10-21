@@ -45,5 +45,21 @@ const Chat = ({userapiKey}: {userapiKey: string}): React.JSX.Element => {
       </div>
     );
   };
+
+  export const GetResponse = async (apikey: string, prompt: string) => {
+    const apiUrl = 'https://api.openai.com/v1/chat/completions';
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apikey}`,
+    };
+    const requestBody = {
+        model: "gpt-3.5-turbo",
+        messages: [{ role: 'user', content: prompt }],
+    };
+
+    const { data } = await axios.post(apiUrl, requestBody, { headers });
+    return data.choices[0].message.content;
+
+  }
   
   export default Chat;
