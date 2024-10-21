@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Home } from './home';
 import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
 import { Results } from './results'; // Add Results import
+import  Chat  from './chat';
 
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -29,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Chat userapiKey={key}/>
         <span>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
