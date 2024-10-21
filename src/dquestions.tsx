@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import DQuestions2 from './dquestions2'; // Import the second detailed questions page
 
 interface DetailedQuestion {
   id: number;
@@ -20,6 +21,7 @@ export const detailedQuestions: DetailedQuestion[] = [
 
 export const Dquestions: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+  const [page, setPage] = useState<'questions' | 'nextPage'>('questions'); // Use state to manage page transitions
 
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
@@ -28,26 +30,28 @@ export const Dquestions: React.FC = () => {
     }));
   };
 
-  const getResults = () => {
-    // This can be where results are processed or API interaction can take place
-    console.log('User answers:', answers);
-    // Example: You can integrate GPT or further process the answers here
+  const getNextPage = () => {
+    setPage('nextPage'); // Update the state to navigate to the next page
   };
+
+  if (page === 'nextPage') {
+    return <DQuestions2 />; // Render the next page when the button is clicked
+  }
 
   return (
     <div className="detailed-question-page">
       <h1>Detailed Career Questions</h1>
       <div className="question-list">
-        {detailedQuestions.map((q) => (
+        {detailedQuestions.map((q, index) => (
           <div key={q.id} className="question-item">
-            <p>{q.questionText}</p>
+            <p>{index + 1}. {q.questionText}</p> {/* Add question number here */}
             <button onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
             <button onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
             <button onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
           </div>
         ))}
       </div>
-      <button onClick={getResults}>Go To Next Page</button>
+      <button onClick={getNextPage}>Go To Next Page</button> {/* Navigate to next page */}
     </div>
   );
 };
