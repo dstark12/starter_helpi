@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Dquestions from './dquestions'; // Import the first detailed questions page
 import Results from './results'; // Import the results page
-import './dquestions2.css';
-
 
 interface DetailedQuestion {
   id: number;
@@ -24,7 +22,7 @@ const DQuestions2: React.FC = () => {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [page, setPage] = useState<'firstPage' | 'secondPage' | 'results'>('secondPage'); // Use state to manage page transitions
 
-  const handleAnswerClick = (id: number, answer: string) => {
+  const handleAnswerChange = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [id]: answer,
@@ -54,9 +52,12 @@ const DQuestions2: React.FC = () => {
         {detailedQuestions2.map((q, index) => (
           <div key={q.id} className="question-item">
             <p>{index + 11}. {q.questionText}</p> {/* Add question number here starting from 11 */}
-            <button onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
-            <button onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
-            <button onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
+            <input
+              type="text"
+              placeholder="Your answer"
+              value={answers[q.id] || ''}
+              onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+            />
           </div>
         ))}
       </div>

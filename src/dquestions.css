@@ -7,4 +7,12 @@
   .question-item button {
     margin-right: 10px;
   }
+  /* Add some styling for the input fields */
+.question-item input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Adds space below each input field */
+    box-sizing: border-box;
+  }
   
