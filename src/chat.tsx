@@ -61,5 +61,17 @@ const Chat = ({userapiKey}: {userapiKey: string}): React.JSX.Element => {
     return data.choices[0].message.content;
 
   }
+
+  export function utils_answers_to_list(dict: {[key:number]:string}): string[]{
+    return Object.values(dict);
+  }
+
+  export function utils_questions_to_list(dict: {id: number, questionText: string}[]): string[]{
+    let vals: string[] = [];
+    for(let i of dict){
+      vals = [...vals, i.questionText];
+    }
+    return vals;
+  }
   
-  export default Chat;
+export default Chat;

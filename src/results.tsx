@@ -1,4 +1,6 @@
 import React from 'react';
+import {Button} from 'react-bootstrap';
+import { utils_answers_to_list, utils_questions_to_list } from './chat';
 import './results.css';
 
 /*
@@ -21,6 +23,11 @@ export function Results({bq, ba, dq, da, dq2, da2}:
     { label: 'Cybersecurity Analyst', score: 50, questions: 4 } // 4 questions aligned with Cybersecurity Analyst
   ];
 
+  function log_results(){
+    console.log(utils_questions_to_list(bq));
+    console.log(utils_answers_to_list(ba));
+  }
+
   return (
     <div className="results-container">
       <header className="header">
@@ -31,6 +38,7 @@ export function Results({bq, ba, dq, da, dq2, da2}:
         {/* Main Career Section */}
         
         <section className="career-section">
+          <Button onClick={log_results}>Log Quiz Results</Button>
           <h2>Your Ideal Career: <span>{mainCareer}</span></h2>
           <p>Based on your quiz results, a <strong>{mainCareer}</strong> seems to be the best fit for you!</p>
         </section>
