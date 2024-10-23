@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Results from './results'; // Import the results page
 
 interface DetailedQuestion {
   id: number;
