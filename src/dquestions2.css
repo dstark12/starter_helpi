@@ -1,6 +1,6 @@
-/* Add space above the "Go To Next Page" button */
+/* Add space above the navigation buttons */
 .detailed-question-page .button-container {
-    margin-top: 20px; /* Adds spacing between the last question and the button */
+    margin-top: 20px; /* Adds spacing between the last question and the buttons */
   }
   
   /* Optional: Add space between the answer buttons */

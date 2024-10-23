@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DQuestions2 from './dquestions2'; // Import the second detailed questions page
+import './dquestions.css';
 
 interface DetailedQuestion {
   id: number;
@@ -15,8 +16,6 @@ export const detailedQuestions: DetailedQuestion[] = [
   { id: 6, questionText: 'Would you rather work in a rapidly changing industry where you must constantly adapt, or a stable field with established practices?' },
   { id: 7, questionText: 'Do you see yourself in a leadership role within five years, or do you prefer staying in technical or specialized positions?' },
   { id: 8, questionText: 'Would you be comfortable with making high-stakes decisions that could have a significant impact on the company?' },
-  { id: 9, questionText: 'How much does the culture and mission of a company influence your decision to work there?' },
-  { id: 10, questionText: 'Are you more motivated by financial compensation, or by the opportunity to work on meaningful projects?' },
 ];
 
 export const Dquestions: React.FC = () => {
@@ -51,7 +50,11 @@ export const Dquestions: React.FC = () => {
           </div>
         ))}
       </div>
-      <button onClick={getNextPage}>Go To Next Page</button> {/* Navigate to next page */}
+
+      {/* Add extra space before the navigation buttons */}
+      <div className="button-container">
+        <button onClick={getNextPage}>Go To Next Page</button>
+      </div>
     </div>
   );
 };

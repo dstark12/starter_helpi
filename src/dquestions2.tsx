@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Dquestions from './dquestions'; // Import the first detailed questions page
 import Results from './results'; // Import the results page
+import './dquestions2.css';
+
 
 interface DetailedQuestion {
   id: number;
@@ -8,16 +10,14 @@ interface DetailedQuestion {
 }
 
 export const detailedQuestions2: DetailedQuestion[] = [
-  { id: 11, questionText: 'Do you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?' },
-  { id: 12, questionText: 'Would you rather work for a small startup where you wear many hats, or a large corporation with more defined roles?' },
-  { id: 13, questionText: 'How important is job stability to you when considering career options?' },
-  { id: 14, questionText: 'Do you enjoy problem-solving through hands-on experimentation, or do you prefer researching and analyzing before taking action?' },
-  { id: 15, questionText: 'Would you consider relocating for a job if it offered a significant opportunity for growth?' },
-  { id: 16, questionText: 'Do you thrive in roles that require constant communication, or do you prefer tasks that allow you to work independently?' },
-  { id: 17, questionText: 'Are you comfortable with taking on roles that require a high degree of risk, or do you prefer more predictable and secure positions?' },
-  { id: 18, questionText: 'Do you value the opportunity to travel for work, or would you rather have a role that keeps you closer to home?' },
-  { id: 19, questionText: 'How important is mentorship and professional development when choosing a job?' },
-  { id: 20, questionText: 'Do you prefer working on projects that have a clear end date, or do you enjoy ongoing, long-term responsibilities?' },
+  { id: 9, questionText: 'Do you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?' },
+  { id: 10, questionText: 'Would you rather work for a small startup where you wear many hats, or a large corporation with more defined roles?' },
+  { id: 11, questionText: 'How important is job stability to you when considering career options?' },
+  { id: 12, questionText: 'Do you enjoy problem-solving through hands-on experimentation, or do you prefer researching and analyzing before taking action?' },
+  { id: 13, questionText: 'Would you consider relocating for a job if it offered a significant opportunity for growth?' },
+  { id: 14, questionText: 'Do you thrive in roles that require constant communication, or do you prefer tasks that allow you to work independently?' },
+  { id: 15, questionText: 'Are you comfortable with taking on roles that require a high degree of risk, or do you prefer more predictable and secure positions?' },
+  { id: 16, questionText: 'Do you value the opportunity to travel for work, or would you rather have a role that keeps you closer to home?' },
 ];
 
 const DQuestions2: React.FC = () => {
@@ -60,11 +60,12 @@ const DQuestions2: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* Previous Page button */}
-      <button onClick={goBackToPreviousPage}>Previous Page</button> {/* Navigate back to the first page */}
 
-      {/* See Results button */}
-      <button onClick={goToResults}>See Results</button> {/* Navigate to the results page */}
+      {/* Add extra space before the navigation buttons */}
+      <div className="button-container">
+        <button onClick={goBackToPreviousPage}>Previous Page</button>
+        <button onClick={goToResults}>See Results</button>
+      </div>
     </div>
   );
 };
