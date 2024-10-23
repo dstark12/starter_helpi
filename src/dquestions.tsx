@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import DQuestions2 from './dquestions2'; // Import the second detailed questions page
 
 interface DetailedQuestion {
   id: number;
@@ -19,9 +18,10 @@ export const detailedQuestions: DetailedQuestion[] = [
   { id: 10, questionText: 'Are you more motivated by financial compensation, or by the opportunity to work on meaningful projects?' },
 ];
 
-export const Dquestions: React.FC = () => {
+export function Dquestions({page, setPage, setQuestions, setGlobalAnswers}:
+  {page: string, setPage: (page: string)=>void, setQuestions: (questions:{id:number, questionText:string}[])=>void, setGlobalAnswers:(answers: {[key:number]:string})=>void}): React.JSX.Element {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  const [page, setPage] = useState<'questions' | 'nextPage'>('questions'); // Use state to manage page transitions
+  //const [page, setPage] = useState<'questions' | 'nextPage'>('questions'); // Use state to manage page transitions
 
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
@@ -31,12 +31,10 @@ export const Dquestions: React.FC = () => {
   };
 
   const getNextPage = () => {
-    setPage('nextPage'); // Update the state to navigate to the next page
+    setQuestions(detailedQuestions);
+    setGlobalAnswers(answers);
+    setPage('dquestions2'); // Update the state to navigate to the next page
   };
-
-  if (page === 'nextPage') {
-    return <DQuestions2 />; // Render the next page when the button is clicked
-  }
 
   return (
     <div className="detailed-question-page">
@@ -56,4 +54,3 @@ export const Dquestions: React.FC = () => {
   );
 };
 
-export default Dquestions;

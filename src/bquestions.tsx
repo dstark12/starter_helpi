@@ -15,7 +15,11 @@ export const questions: Question[] = [
   { id: 7, questionText: 'Would you be comfortable with a career that requires frequent travel or relocation?' },
 ];
 
-export function Bquestions({ setPage }: { setPage: (page: string) => void }): React.JSX.Element {
+
+export function Bquestions({setPage, setQuestions, setGlobalAnswers}: 
+  {setPage: (page: string) => void, setQuestions: (questions: {id:number, questionText: string}[]) => void, setGlobalAnswers: (answers: {[key: number]: string}) => void}): React.JSX.Element {
+  
+
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
   const handleAnswerClick = (id: number, answer: string) => {
@@ -33,7 +37,14 @@ export function Bquestions({ setPage }: { setPage: (page: string) => void }): Re
   };
 
   const getResults = () => {
+
+    // This can be where results are processed or API interaction can take place
+    setQuestions(questions);
+    setGlobalAnswers(answers);
     console.log('User answers:', answers);
+    setPage('results');
+    // Example: You can integrate GPT or further process the answers here
+
   };
 
   // Calculate progress
