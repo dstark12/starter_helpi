@@ -55,7 +55,7 @@ export function Bquestions({setPage, setQuestions, setGlobalAnswers}:
   return (
     <div className="basic-question-page">
       <h1>Basic Career Questions</h1>
-
+      <p>This quiz helps you explore your career interests by asking a series of multiple-choice questions about your preferences and working style. You will be presented with questions covering topics like technology, creativity, collaboration, and work-life balance. By selecting your answers, you'll gain insights into potential career paths that align with your strengths and preferences. Simply choose from 'Yes', 'No', or 'I Don't Know' for each question, and see how your responses shape your career profile!</p>
       {/* Progress bar */}
       <div style={{ width: '100%', backgroundColor: '#e0e0e0', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
         <div
