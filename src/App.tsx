@@ -48,7 +48,7 @@ function App() {
         {page === "bquestions" ? <Bquestions setPage={setPage} setQuestions={setBq} setGlobalAnswers={setBanswers}/> : null}
         {page === "dquestions" ? <Dquestions page={page} setPage={setPage} setQuestions={setDq} setGlobalAnswers={setDanswers}/> : null}
         {page === "dquestions2" ? <Dquestions2 page={page} setPage={setPage} setQuestions={setDq2} setGlobalAnswers={setDanswers2}/> : null}
-        {page === "results" ? <Results /> : null} {/* Add Results Page */}
+        {page === "results" ? <Results bq={bq} ba={banswers} dq={dq} da={danswers} dq2={dq2} da2={danswers2}/> : null} {/* Add Results Page */}
       </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
