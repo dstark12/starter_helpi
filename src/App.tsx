@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import { Home } from './home';
@@ -7,7 +6,6 @@ import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
 import { Dquestions2 } from './dquestions2';
 import { Results } from './results'; // Add Results import
-import  Chat, {GetResponse}  from './chat';
 
 let keyData = "";
 const saveKeyData = "MYKEY";
