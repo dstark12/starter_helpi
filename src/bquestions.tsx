@@ -58,6 +58,7 @@ export function Bquestions({setPage}: {setPage: (page: string) => void}): React.
       </div>
       <button onClick={getResults}>Get Answer</button>
       <button onClick={() => setPage('home')}>Go Back to Home</button>
+      <button onClick={() => setPage('dquestions')}>Next Page</button>
     </div>
   );
 };
