@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Dquestions from './dquestions'; // Import the first detailed questions page
 import Results from './results'; // Import the results page
 
 interface DetailedQuestion {
@@ -20,9 +19,9 @@ export const detailedQuestions2: DetailedQuestion[] = [
   { id: 20, questionText: 'Do you prefer working on projects that have a clear end date, or do you enjoy ongoing, long-term responsibilities?' },
 ];
 
-const DQuestions2: React.FC = () => {
+export function Dquestions2({page, setPage, setQuestions, setGlobalAnswers}:
+  {page: string, setPage: (page: string)=>void, setQuestions: (questions:{id:number, questionText:string}[])=>void, setGlobalAnswers:(answers: {[key:number]:string})=>void}): React.JSX.Element {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  const [page, setPage] = useState<'firstPage' | 'secondPage' | 'results'>('secondPage'); // Use state to manage page transitions
 
   const handleAnswerClick = (id: number, answer: string) => {
     setAnswers((prevAnswers) => ({
@@ -32,20 +31,16 @@ const DQuestions2: React.FC = () => {
   };
 
   const goBackToPreviousPage = () => {
-    setPage('firstPage'); // Update the state to navigate back to the first page
+    setQuestions(detailedQuestions2);
+    setGlobalAnswers(answers);
+    setPage('dquestions'); // Update the state to navigate back to the first page
   };
 
   const goToResults = () => {
+    setQuestions(detailedQuestions2);
+    setGlobalAnswers(answers);
     setPage('results'); // Update the state to navigate to the results page
   };
-
-  if (page === 'firstPage') {
-    return <Dquestions />; // Render the first page when the "Previous Page" button is clicked
-  }
-
-  if (page === 'results') {
-    return <Results />; // Render the results page when the "See Results" button is clicked
-  }
 
   return (
     <div className="detailed-question-page">
@@ -69,4 +64,3 @@ const DQuestions2: React.FC = () => {
   );
 };
 
-export default DQuestions2;
