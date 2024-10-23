@@ -24,6 +24,7 @@ export function Dquestions({page, setPage, setQuestions, setGlobalAnswers}:
   //const [page, setPage] = useState<'questions' | 'nextPage'>('questions'); // Use state to manage page transitions
 
   const handleAnswerClick = (id: number, answer: string) => {
+  
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
       [id]: answer,
@@ -37,20 +38,23 @@ export function Dquestions({page, setPage, setQuestions, setGlobalAnswers}:
   };
 
   return (
-    <div className="detailed-question-page">
+<div className="detailed-question-page">
       <h1>Detailed Career Questions</h1>
       <div className="question-list">
         {detailedQuestions.map((q, index) => (
           <div key={q.id} className="question-item">
-            <p>{index + 1}. {q.questionText}</p> {/* Add question number here */}
-            <button onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
-            <button onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
-            <button onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
+            <p>{index + 1}. {q.questionText}</p>
+            <input
+              type="text"
+              placeholder="Enter your answer here"
+              value={answers[q.id] || ''}
+              onChange={(e) => handleAnswerClick(q.id, e.target.value)}
+            />
           </div>
         ))}
       </div>
       <button onClick={getNextPage}>Go To Next Page</button> {/* Navigate to next page */}
     </div>
   );
-};
+}
 
