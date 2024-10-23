@@ -1,8 +1,16 @@
 import React from 'react';
 import './results.css';
 
+
+function PromptWithQuestions(questions: string[]){
+  let pre_prompt = "Based on the answers to the following questions, provide some career suggestions.";
+  let post_prompt = "Based on the previous questions and responses, provide three career suggestions, along with a short description of each and the reason why it would be a good suggestion. Your answer should be in the following format: Career 1: {suggested career}. {Description of career}. {Reason why career would appeal to user}.";
+
+}
+
 export function Results({bq, ba, dq, da, dq2, da2}: 
   {bq: {id: number, questionText: string}[], ba: {[key: number]: string}, dq: {id: number, questionText: string}[], da: {[key: number]: string}, dq2: {id: number, questionText: string}[], da2: {[key: number]: string}}): React.JSX.Element {
+
   // Example career data
   const mainCareer = "Software Engineer";
   //const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
