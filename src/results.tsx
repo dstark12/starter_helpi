@@ -58,11 +58,6 @@ export function Results({apikey, bq, ba, dq, da, dq2, da2}:
     GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), setSuggestions);
   }
 
-  function log_results(){
-    console.log(utils_questions_to_list(bq));
-    console.log(utils_answers_to_list(ba));
-  }
-
   return (
     <div className="results-container">
       <header className="header">
