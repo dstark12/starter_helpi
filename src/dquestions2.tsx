@@ -18,27 +18,33 @@ export const detailedQuestions2: DetailedQuestion[] = [
   { id: 20, questionText: 'Do you prefer working on projects that have a clear end date, or do you enjoy ongoing, long-term responsibilities?' },
 ];
 
-export function Dquestions2({page, setPage, setQuestions, setGlobalAnswers}:
-  {page: string, setPage: (page: string)=>void, setQuestions: (questions:{id:number, questionText:string}[])=>void, setGlobalAnswers:(answers: {[key:number]:string})=>void}): React.JSX.Element {
+interface Dquestions2Props {
+  page: string;
+  setPage: (page: string) => void;
+  setQuestions: (questions: DetailedQuestion[]) => void;
+  setGlobalAnswers: (answers: { [key: number]: string }) => void;
+}
+
+export function Dquestions2({ page, setPage, setQuestions, setGlobalAnswers }: Dquestions2Props): React.JSX.Element {
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
-  const handleAnswerClick = (id: number, answer: string) => {
+  const handleAnswerChange = (id: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
     setAnswers((prevAnswers) => ({
       ...prevAnswers,
-      [id]: answer,
+      [id]: e.target.value,
     }));
   };
 
   const goBackToPreviousPage = () => {
     setQuestions(detailedQuestions2);
     setGlobalAnswers(answers);
-    setPage('dquestions'); // Update the state to navigate back to the first page
+    setPage('dquestions');
   };
 
   const goToResults = () => {
     setQuestions(detailedQuestions2);
     setGlobalAnswers(answers);
-    setPage('results'); // Update the state to navigate to the results page
+    setPage('results');
   };
 
   return (
@@ -47,19 +53,18 @@ export function Dquestions2({page, setPage, setQuestions, setGlobalAnswers}:
       <div className="question-list">
         {detailedQuestions2.map((q, index) => (
           <div key={q.id} className="question-item">
-            <p>{index + 11}. {q.questionText}</p> {/* Add question number here starting from 11 */}
-            <button onClick={() => handleAnswerClick(q.id, 'Yes')}>YES</button>
-            <button onClick={() => handleAnswerClick(q.id, 'IDK')}>IDK</button>
-            <button onClick={() => handleAnswerClick(q.id, 'No')}>NO</button>
+            <p>{index + 11}. {q.questionText}</p>
+            <input
+              type="text"
+              placeholder="Enter your answer here"
+              value={answers[q.id] || ''}
+              onChange={handleAnswerChange(q.id)}
+            />
           </div>
         ))}
       </div>
-      {/* Previous Page button */}
-      <button onClick={goBackToPreviousPage}>Previous Page</button> {/* Navigate back to the first page */}
-
-      {/* See Results button */}
-      <button onClick={goToResults}>See Results</button> {/* Navigate to the results page */}
+      <button onClick={goBackToPreviousPage}>Previous Page</button>
+      <button onClick={goToResults}>See Results</button>
     </div>
   );
 };
-
