@@ -70,7 +70,9 @@ export function Results({apikey, bq, ba, dq, da, dq2, da2}:
         <section className="career-section">
           <h2>AI-Generated Results</h2>
           <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
-          <p>{suggestions}</p>
+          <p>{suggestions.split(`|`)[0]}</p>
+          <p>{suggestions.split(`|`)[1]}</p>
+          <p>{suggestions.split(`|`)[2]}</p>
 
         </section>
         
