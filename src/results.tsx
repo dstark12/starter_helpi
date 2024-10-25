@@ -1,25 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Button} from 'react-bootstrap';
+import { GetResponse, utils_answers_to_list, utils_questions_to_list } from './chat';
 import './results.css';
 
-/*
-function PromptWithQuestions(questions: string[]){
+
+function GeneratePromptWithQuestions(questions: string[], answers: string[]): string{
   let pre_prompt = "Based on the answers to the following questions, provide some career suggestions.";
   let post_prompt = "Based on the previous questions and responses, provide three career suggestions, along with a short description of each and the reason why it would be a good suggestion. Your answer should be in the following format: Career 1: {suggested career}. {Description of career}. {Reason why career would appeal to user}.";
-
+  let prompt = "";
+  for (let i=0; i<answers.length; i+=1){
+      prompt += `${questions[i]} ${answers[i]}. `;
+  }
+  prompt = pre_prompt + prompt + post_prompt;
+  return prompt;
 }
-*/
-export function Results({bq, ba, dq, da, dq2, da2}: 
-  {bq: {id: number, questionText: string}[], ba: {[key: number]: string}, dq: {id: number, questionText: string}[], da: {[key: number]: string}, dq2: {id: number, questionText: string}[], da2: {[key: number]: string}}): React.JSX.Element {
+
+export function Results({apikey, bq, ba, dq, da, dq2, da2}: 
+  {apikey: string, bq: {id: number, questionText: string}[], ba: {[key: number]: string}, dq: {id: number, questionText: string}[], da: {[key: number]: string}, dq2: {id: number, questionText: string}[], da2: {[key: number]: string}}): React.JSX.Element {
 
   // Example career data
   const mainCareer = "Software Engineer";
   //const alternativeCareers = ["Data Scientist", "Cybersecurity Analyst", "Web Developer"];
   const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
+  const [suggestions, setSuggestions] = useState<string>("");
   const graphData = [
     { label: 'Software Engineer', score: 80, questions: 7 }, // 7 questions aligned with Software Engineer
     { label: 'Data Scientist', score: 65, questions: 5 },    // 5 questions aligned with Data Scientist
     { label: 'Cybersecurity Analyst', score: 50, questions: 4 } // 4 questions aligned with Cybersecurity Analyst
   ];
+
+  function GetSuggestions(){
+
+    setSuggestions("Awaiting response...");
+    let all_q: string[] = [];
+    let all_a: string[] = [];
+
+    let ba_list = utils_answers_to_list(ba);
+    let da_list = utils_answers_to_list(da);
+    let da2_list = utils_answers_to_list(da2);
+
+    let bq_list = utils_questions_to_list(bq);
+    let dq_list = utils_questions_to_list(dq);
+    let dq2_list = utils_questions_to_list(dq2);
+
+    all_a = [...ba_list, ...da_list, ...da2_list]
+
+    for (let i=0; i<ba_list.length; i+=1){
+      all_q = [...all_q, bq_list[i]];
+    }
+    for (let i=0; i<da_list.length; i+=1){
+      all_q = [...all_q, dq_list[i]];
+    }
+    for (let i=0; i<da2_list.length; i+=1){
+      all_q = [...all_q, dq2_list[i]];
+    }
+
+    GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), setSuggestions);
+  }
+
+  function log_results(){
+    console.log(utils_questions_to_list(bq));
+    console.log(utils_answers_to_list(ba));
+  }
 
   return (
     <div className="results-container">
@@ -29,6 +71,13 @@ export function Results({bq, ba, dq, da, dq2, da2}:
 
       <main className="main-content">
         {/* Main Career Section */}
+
+        <section className="career-section">
+          <h2>AI-Generated Results</h2>
+          <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
+          <p>{suggestions}</p>
+
+        </section>
         
         <section className="career-section">
           <h2>Your Ideal Career: <span>{mainCareer}</span></h2>
@@ -63,7 +112,7 @@ export function Results({bq, ba, dq, da, dq2, da2}:
           </ul>
         </section>
       </main>
-
+      
       {/* Footer */}
       <footer className="footer">
         <p>Career Quiz © 2024</p>
