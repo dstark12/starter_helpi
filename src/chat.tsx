@@ -53,7 +53,7 @@ const Chat = ({userapiKey}: {userapiKey: string}): React.JSX.Element => {
         'Authorization': `Bearer ${apikey}`,
     };
     const requestBody = {
-        model: "gpt-3.5-turbo",
+        model: "gpt-4o",
         messages: [{ role: 'user', content: prompt }],
     };
 
