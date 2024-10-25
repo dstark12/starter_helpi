@@ -46,7 +46,7 @@ const Chat = ({userapiKey}: {userapiKey: string}): React.JSX.Element => {
     );
   };
 
-  export const GetResponse = async (apikey: string, prompt: string) => {
+  export const GetResponse = async (apikey: string, prompt: string, result: (arg0: string)=>void) => {
     const apiUrl = 'https://api.openai.com/v1/chat/completions';
     const headers = {
         'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const Chat = ({userapiKey}: {userapiKey: string}): React.JSX.Element => {
     };
 
     const { data } = await axios.post(apiUrl, requestBody, { headers });
-    return data.choices[0].message.content;
+    result(data.choices[0].message.content);
 
   }
 
