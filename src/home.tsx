@@ -7,6 +7,8 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
         <div className="container">
             <header>
                 <h1>Super Fun Career Quiz</h1>
+            </header>
+            <div className="button-container-wrapper">
                 <div className="button-container">
                     <div className="left-button">
                         <Button 
@@ -27,7 +29,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
                         <p>A quiz that gives the user questions they can answer with open-ended responses for a longer, accurate experience</p>
                     </div>
                 </div>
-            </header>
+            </div>
         </div>
     );
 }
