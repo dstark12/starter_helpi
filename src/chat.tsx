@@ -9,7 +9,7 @@ export const GetResponse = async (apikey: string, prompt: string, result: (arg0:
   };
   const requestBody = {
     model: "gpt-4o",
-    messages: [{ role: 'user', content: prompt }],
+    messages: [{role: 'system', content: 'You are an agent that assist people with finding career suggestions. You always respond in the exact format requested, without any additional comments.'}, { role: 'user', content: prompt }],
   };
 
   const { data } = await axios.post(apiUrl, requestBody, { headers });
