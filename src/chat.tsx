@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 import axios from 'axios';
 
 export const GetResponse = async (apikey: string, prompt: string, result: (arg0: string) => void) => {
