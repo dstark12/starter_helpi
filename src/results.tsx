@@ -15,8 +15,8 @@ function GeneratePromptWithQuestions(questions: string[], answers: string[]): st
   return prompt;
 }
 
-export function Results({apikey, bq, ba, dq, da, dq2, da2}: 
-  {apikey: string, bq: {id: number, questionText: string}[], ba: {[key: number]: string}, dq: {id: number, questionText: string}[], da: {[key: number]: string}, dq2: {id: number, questionText: string}[], da2: {[key: number]: string}}): React.JSX.Element {
+export function Results({apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2}: 
+  {apikey: string, bq: {id: number, questionText: string}[], ba: {[key: number]: string}, dq: {id: number, questionText: string}[], da: {[key: number]: string}, dq2: {id: number, questionText: string}[], da2: {[key: number]: string}, bfunc: (answers: {[key: number]: string}) => void, dfunc: (answers: {[key: number]: string}) => void, dfunc2: (answers: {[key: number]: string}) => void }): React.JSX.Element {
 
   // Example career data
   const mainCareer = "Software Engineer";
@@ -109,7 +109,11 @@ export function Results({apikey, bq, ba, dq, da, dq2, da2}:
           </ul>
         </section>
       </main>
-      
+
+      <div>
+      <Button className="reset-button" onClick={()=>{bfunc({});dfunc({});dfunc2({});}}>Reset All Quiz Answers</Button>
+      </div>
+
       {/* Footer */}
       <footer className="footer">
         <p>Career Quiz © 2024</p>
