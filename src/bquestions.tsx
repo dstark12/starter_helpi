@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 interface Question {
   id: number;
@@ -16,17 +17,19 @@ export const questions: Question[] = [
 ];
 
 
-export function Bquestions({setPage, setQuestions, setGlobalAnswers}: 
-  {setPage: (page: string) => void, setQuestions: (questions: {id:number, questionText: string}[]) => void, setGlobalAnswers: (answers: {[key: number]: string}) => void}): React.JSX.Element {
+export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswers}: 
+  {setPage: (page: string) => void, setQuestions: (questions: {id:number, questionText: string}[]) => void, GlobalAnswers: {[key: number]: string}, setGlobalAnswers: (answers: {[key: number]: string}) => void}): React.JSX.Element {
   
 
-  const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+  //const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+  const [answers, setAnswers] = [GlobalAnswers, setGlobalAnswers];
 
   const handleAnswerClick = (id: number, answer: string) => {
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
+    setAnswers({
+      ...answers,
       [id]: answer,
-    }));
+    });
+    //setGlobalAnswers({...GlobalAnswers, [id]: answer});
   };
 
   const getButtonStyle = (questionId: number, answer: string) => {
@@ -52,6 +55,8 @@ export function Bquestions({setPage, setQuestions, setGlobalAnswers}:
   const totalQuestions = questions.length;
   const progress = (answeredQuestions / totalQuestions) * 100;
 
+  //if(answers !== GlobalAnswers){setAnswers(GlobalAnswers);}
+
   return (
     <div className="basic-question-page">
       <h1>Basic Career Questions</h1>
@@ -70,6 +75,8 @@ export function Bquestions({setPage, setQuestions, setGlobalAnswers}:
 
       {/* Display progress in text */}
       <p>{answeredQuestions}/{totalQuestions} questions answered</p>
+
+      <Button onClick={()=>{setAnswers({})}}>Reset Answers</Button>
 
       <div className="question-list">
         {questions.map((q) => (

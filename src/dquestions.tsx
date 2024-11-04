@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 
 interface DetailedQuestion {
@@ -21,16 +22,20 @@ export const detailedQuestions: DetailedQuestion[] = [
 ];
 
 
-export function Dquestions({ page, setPage, setQuestions, setGlobalAnswers }:
- { page: string, setPage: (page: string) => void, setQuestions: (questions: DetailedQuestion[]) => void, setGlobalAnswers: (answers: { [key: number]: string }) => void }): React.JSX.Element {
- const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlobalAnswers }:
+ { page: string, setPage: (page: string) => void, setQuestions: (questions: DetailedQuestion[]) => void, GlobalAnswers: {[key: number]: string}, setGlobalAnswers: (answers: { [key: number]: string }) => void }): React.JSX.Element {
+ //const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+ const [answers, setAnswers] = [GlobalAnswers, setGlobalAnswers];
 
 
  const handleAnswerChange = (id: number, answer: string) => {
+  /*
    setAnswers((prevAnswers) => ({
      ...prevAnswers,
      [id]: answer,
    }));
+   */
+  setAnswers({...answers, [id]: answer});
  };
 
 
@@ -48,6 +53,10 @@ export function Dquestions({ page, setPage, setQuestions, setGlobalAnswers }:
  return (
    <div className="detailed-question-page">
      <h1>Detailed Career Questions</h1>
+
+    {/*Reset Button*/}
+    <Button onClick={()=>{setAnswers({})}}>Reset Answers</Button>
+
      <div className="question-list">
        {detailedQuestions.map((q, index) => (
          <div key={q.id} className="question-item">
