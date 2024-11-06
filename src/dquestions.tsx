@@ -37,7 +37,9 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
    */
   setAnswers({...answers, [id]: answer});
  };
-
+ const answeredQuestions = detailedQuestions.filter((q) => answers[q.id]?.trim()).length;
+ const totalQuestions = detailedQuestions.length;
+ const progress = (answeredQuestions / totalQuestions) * 100;
 
  // Check if all questions are answered
  const allQuestionsAnswered = detailedQuestions.every((q) => answers[q.id]?.trim());
@@ -53,7 +55,17 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
  return (
    <div className="detailed-question-page">
      <h1>Detailed Career Questions</h1>
-
+ {/* Progress Bar */}
+ <div style={{ width: '100%', backgroundColor: '#e0e0e0', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+  <div
+    style={{
+      width: `${progress}%`,
+      backgroundColor: 'green',
+      height: '100%',
+      borderRadius: '10px',
+    }}
+  ></div>
+</div>
     {/*Reset Button*/}
     <Button onClick={()=>{setAnswers({})}}>Reset Answers</Button>
 
