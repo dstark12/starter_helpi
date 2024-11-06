@@ -1,7 +1,8 @@
 //import React, { useState } from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 
 export const GetResponse = async (apikey: string, prompt: string, result: (arg0: string) => void) => {
+  /*
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
   const headers = {
     'Content-Type': 'application/json',
@@ -12,7 +13,7 @@ export const GetResponse = async (apikey: string, prompt: string, result: (arg0:
     messages: [{role: 'system', content: 'You are an agent that assist people with finding career suggestions. You always respond in the exact format requested, without any additional comments.'}, { role: 'user', content: prompt }],
   };
 
-  /*
+  
   const { data } = await axios.post(apiUrl, requestBody, { headers });
 
   try{
