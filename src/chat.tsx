@@ -12,6 +12,7 @@ export const GetResponse = async (apikey: string, prompt: string, result: (arg0:
     messages: [{role: 'system', content: 'You are an agent that assist people with finding career suggestions. You always respond in the exact format requested, without any additional comments.'}, { role: 'user', content: prompt }],
   };
 
+  /*
   const { data } = await axios.post(apiUrl, requestBody, { headers });
 
   try{
@@ -26,6 +27,8 @@ export const GetResponse = async (apikey: string, prompt: string, result: (arg0:
     console.log(error);
     result(data.choices[0].message.content);
   }
+  */
+  result("Career 1: Software Engineer. You like money.|Career 2: Data Scientist. You really like money.|Career 3: Nvidia Software Engineer. You really, REALLY like money.");
 }
 
 export function utils_answers_to_list(dict: { [key: number]: string }): string[] {
