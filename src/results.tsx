@@ -16,14 +16,14 @@ function GeneratePromptWithQuestions(questions: string[], answers: string[]): st
 export function Results({ apikey, bq, ba, dq, da, dq2, da2 }: 
   { apikey: string, bq: { id: number, questionText: string }[], ba: { [key: number]: string }, dq: { id: number, questionText: string }[], da: { [key: number]: string }, dq2: { id: number, questionText: string }[], da2: { [key: number]: string } }): React.JSX.Element {
 
-  const [showResults, setShowResults] = useState(false); // State to control visibility of results page
+  const [showResults, setShowResults] = useState(false);
   const [mainCareer, setMainCareer] = useState<string>("Software Engineer");
   const [suggestions, setSuggestions] = useState<string>("");
 
   const graphData = [
-    { label: 'Software Engineer', score: 80, questions: 7 },
-    { label: 'Data Scientist', score: 65, questions: 5 },
-    { label: 'Cybersecurity Analyst', score: 50, questions: 4 }
+    { label: 'Software Engineer', score: 80, questions: 7, description: "A career based around developing, testing, and maintaining software applications." },
+    { label: 'Data Scientist', score: 65, questions: 5, description: "A career focused on analyzing complex data to make data-driven decisions." },
+    { label: 'Cybersecurity Analyst', score: 50, questions: 4, description: "A career dedicated to protecting systems and networks from cyber threats." }
   ];
 
   function GetSuggestions() {
@@ -33,9 +33,9 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
 
     GetResponse(apikey, GeneratePromptWithQuestions(allQuestions, allAnswers), (response) => {
       const [firstCareer, ...rest] = response.split('|');
-      setMainCareer(firstCareer); // Set main career to the first result
-      setSuggestions(response);   // Keep all suggestions in state if needed
-      setShowResults(true);       // Show the results page after getting suggestions
+      setMainCareer(firstCareer);
+      setSuggestions(response);
+      setShowResults(true);
     });
   }
 
@@ -46,7 +46,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
       </header>
 
       <main className="main-content">
-        {/* Initially show only the button */}
         {!showResults && (
           <section className="career-section">
             <h2>AI-Generated Results</h2>
@@ -54,7 +53,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
           </section>
         )}
 
-        {/* Show results page content only after the button is pressed */}
         {showResults && (
           <>
             <section className="career-section main-career">
@@ -65,16 +63,19 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
             <section className="detailed-graphs-section">
               <h3>Top 3 Careers And Why:</h3>
               {graphData.map((data, index) => (
-                <div key={index} className="career-detail">
-                  <p>{data.questions} of your answers indicated interest in {data.label}.</p>
-                  <div className="detail-graph">
-                    <div
-                      className="detail-bar"
-                      style={{ width: `${data.questions * 15}%` }}
-                    >
-                      <span className="detail-bar-label">{data.questions} questions</span>
+                <div key={index}>
+                  <div className="career-detail">
+                    <p>{data.questions} of your answers indicated interest in {data.label}.</p>
+                    <div className="detail-graph">
+                      <div
+                        className="detail-bar"
+                        style={{ width: `${data.questions * 15}%` }}
+                      >
+                        <span className="detail-bar-label">{data.questions} questions</span>
+                      </div>
                     </div>
                   </div>
+                  <p className="career-description">{data.description}</p> {/* Move description outside the grey box */}
                 </div>
               ))}
             </section>

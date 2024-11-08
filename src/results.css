@@ -157,3 +157,11 @@ body {
   text-align: center; /* Center align the text */
   margin-bottom: 20px; /* Add some space below */
 }
+
+.career-description { /* Description under each career */
+
+  margin-top: 15px; /* Adds space between the grey box and the description */
+  color: #555; /* Darker grey for readability */
+  font-size: 2rem; /* Adjust font size for better readability */
+  line-height: 1.5;
+}
