@@ -55,6 +55,7 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
  return (
    <div className="detailed-question-page">
      <h1>Detailed Career Questions</h1>
+     <p>This isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.</p>
  {/* Progress Bar */}
  <div style={{ width: '100%', backgroundColor: '#e0e0e0', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
