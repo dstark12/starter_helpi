@@ -23,6 +23,7 @@ function App() {
   const [banswers, setBanswers] = useState<{[key: number]: string}>([]);
   const [danswers, setDanswers] = useState<{[key: number]: string}>([]);
   const [danswers2, setDanswers2] = useState<{[key: number]: string}>([]);
+  
 
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
