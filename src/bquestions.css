@@ -1,0 +1,169 @@
+/* Main container */
+.basic-question-page {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    border-radius: 10px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header */
+  .basic-question-page h1 {
+    color: #333333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Description paragraph */
+  .basic-question-page p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Progress bar container */
+  .progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  
+  /* Progress bar */
+  .progress-bar {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 6px;
+    transition: width 0.4s ease;
+  }
+  
+  /* Progress text */
+  .progress-text {
+    font-size: 0.9rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Question list */
+  .question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  /* Question item */
+  .question-item {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .question-item:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Question text */
+  .question-item p {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: #333333;
+    font-weight: 500;
+  }
+  
+  /* Answer buttons */
+  .question-item button {
+    padding: 10px 15px;
+    margin-right: 8px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #007bff;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .question-item button:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  .question-item button[selected="true"] {
+    background-color: #0056b3;
+    color: white;
+    border-color: #0056b3;
+  }
+  
+  /* Navigation buttons */
+  .basic-question-page .nav-button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 15px 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    width: calc(50% - 10px);
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .basic-question-page .nav-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .basic-question-page .nav-button:not(:disabled):hover {
+    background-color: #0056b3;
+  }
+  
+  /* Reset button styling */
+  .reset-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #d1d1d1;
+  }
+  
+  /* Completion notification */
+  .completion-notification {
+    text-align: center;
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  /* For better alignment and readability */
+  button {
+    min-width: 80px;
+    margin: 5px 0;
+  }
+  
