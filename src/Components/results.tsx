@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import { GetResponse, utils_answers_to_list, utils_questions_to_list } from './chat';
-import './results.css';
+import '../Styles/results.css';
 
 
 function GeneratePromptWithQuestions(questions: string[], answers: string[]): string{
