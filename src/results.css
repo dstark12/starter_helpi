@@ -75,3 +75,18 @@ body {
 .career-section .btn:hover {
   background-color: #0056b3;
 }
+
+/* About You section styling */
+.about-you-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.about-you-section h3 {
+  color: #333;
+}
+
+.about-you-section p {
+  color: #000;
+}

@@ -19,17 +19,20 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
   const [showResults, setShowResults] = useState(false);
   const [mainCareer, setMainCareer] = useState<string>("Software Engineer");
   const [suggestions, setSuggestions] = useState<string>("");
-
+  const [aboutYou, setAboutYou] = useState<string>("");
 
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
+    setAboutYou("");
+    
     const allAnswers = [...utils_answers_to_list(ba), ...utils_answers_to_list(da), ...utils_answers_to_list(da2)];
     const allQuestions = [...utils_questions_to_list(bq), ...utils_questions_to_list(dq), ...utils_questions_to_list(dq2)];
 
-    GetResponse(apikey, GeneratePromptWithQuestions(allQuestions, allAnswers), (response) => {
-      const [firstCareer, ...rest] = response.split('|');
+    GetResponse(apikey, GeneratePromptWithQuestions(allQuestions, allAnswers), (careers, about) => {
+      const [firstCareer, ...rest] = careers.split('|');
       setMainCareer(firstCareer);
-      setSuggestions(response);
+      setSuggestions(careers);
+      setAboutYou(about);
       setShowResults(true);
     });
   }
@@ -50,16 +53,20 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
 
         {showResults && (
           <>
+            <section className="about-you-section">
+              <h3>About You</h3>
+              <p>{aboutYou.split(': ')[1] || aboutYou}</p>
+            </section>
+
             <section className="career-section main-career">
               <h2>Your Top Career: <span>{mainCareer.split(': ')[1] || mainCareer}</span></h2>
               <p>Based on your quiz results, a <strong>{mainCareer.split(': ')[1] || mainCareer}</strong> seems to be the best fit for you!</p>
             </section>
 
-
             <section className="alternatives-section">
               <h3>Even More Career Options:</h3>
               <ul>
-                {["Database Architect", "Mobile App Developer", "Information Security Analyst"].map((career, index) => (
+                {suggestions.split('|').slice(1).map((career, index) => (
                   <li key={index}>{career}</li>
                 ))}
               </ul>
