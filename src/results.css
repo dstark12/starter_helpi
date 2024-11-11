@@ -165,3 +165,16 @@ body {
   font-size: 2rem; /* Adjust font size for better readability */
   line-height: 1.5;
 }
+
+.career-section .btn {
+  padding: 15px 30px; /* Increases padding for a larger button */
+  font-size: 1.25rem; /* Increases font size */
+  border-radius: 8px; /* Adds rounded corners */
+  background-color: #007bff; /* Adjust background color as desired */
+  color: #ffffff; /* White text color */
+  transition: background-color 0.3s ease; /* Adds a transition effect */
+}
+
+.career-section .btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}

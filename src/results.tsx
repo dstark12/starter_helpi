@@ -20,11 +20,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
   const [mainCareer, setMainCareer] = useState<string>("Software Engineer");
   const [suggestions, setSuggestions] = useState<string>("");
 
-  const graphData = [
-    { label: 'Software Engineer', score: 80, questions: 7, description: "A career based around developing, testing, and maintaining software applications." },
-    { label: 'Data Scientist', score: 65, questions: 5, description: "A career focused on analyzing complex data to make data-driven decisions." },
-    { label: 'Cybersecurity Analyst', score: 50, questions: 4, description: "A career dedicated to protecting systems and networks from cyber threats." }
-  ];
 
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
@@ -48,7 +43,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
       <main className="main-content">
         {!showResults && (
           <section className="career-section">
-            <h2>AI-Generated Results</h2>
+            <h2>Click Below to See Results!</h2>
             <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
           </section>
         )}
@@ -56,29 +51,10 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
         {showResults && (
           <>
             <section className="career-section main-career">
-              <h2>Your Ideal Career: <span>{mainCareer.split(': ')[1] || mainCareer}</span></h2>
+              <h2>Your Top Career: <span>{mainCareer.split(': ')[1] || mainCareer}</span></h2>
               <p>Based on your quiz results, a <strong>{mainCareer.split(': ')[1] || mainCareer}</strong> seems to be the best fit for you!</p>
             </section>
 
-            <section className="detailed-graphs-section">
-              <h3>Top 3 Careers And Why:</h3>
-              {graphData.map((data, index) => (
-                <div key={index}>
-                  <div className="career-detail">
-                    <p>{data.questions} of your answers indicated interest in {data.label}.</p>
-                    <div className="detail-graph">
-                      <div
-                        className="detail-bar"
-                        style={{ width: `${data.questions * 15}%` }}
-                      >
-                        <span className="detail-bar-label">{data.questions} questions</span>
-                      </div>
-                    </div>
-                  </div>
-                  <p className="career-description">{data.description}</p> {/* Move description outside the grey box */}
-                </div>
-              ))}
-            </section>
 
             <section className="alternatives-section">
               <h3>Even More Career Options:</h3>
