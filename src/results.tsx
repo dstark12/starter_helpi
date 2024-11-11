@@ -40,7 +40,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
   return (
     <div className="results-container">
       <header className="header">
-        <h1>Career Quiz Results</h1>
+        <h1>Career Quiz Results - About You</h1>
       </header>
 
       <main className="main-content">
@@ -54,7 +54,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
         {showResults && (
           <>
             <section className="about-you-section">
-              <h3>About You</h3>
               <p>{aboutYou.split(': ')[1] || aboutYou}</p>
             </section>
 
