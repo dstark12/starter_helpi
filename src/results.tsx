@@ -54,6 +54,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2 }:
         {showResults && (
           <>
             <section className="about-you-section">
+              <h3 className="about-you-header">Based on your quiz results, we found this:</h3>
               <p>{aboutYou.split(': ')[1] || aboutYou}</p>
             </section>
 

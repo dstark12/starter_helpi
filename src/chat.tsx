@@ -35,7 +35,7 @@ export const GetResponse = async (apikey: string, prompt: string, result: (caree
   // Mock response for testing purposes
   result(
     "Career 1: Software Engineer. You like money.|Career 2: Data Scientist. You really like money.|Career 3: Nvidia Software Engineer. You really, REALLY like money.",
-    "About You: This is an example about you section - We found that you are Analytical and driven by problem-solving. Interested in tech and data, with a knack for impactful work."
+    "About You: This is an example about you section It should be about this length long for formatting purposes - We found that you are Analytical and driven by problem-solving. Blah Blah Blah Blah Blahhhhhh Interested in tech and data, with a knack for impactful work."
   );
 };
 

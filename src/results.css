@@ -83,7 +83,10 @@ body {
   border-radius: 8px;
 }
 
-.about-you-section h3 {
+.about-you-header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
   color: #333;
 }
 
