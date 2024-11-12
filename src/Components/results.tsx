@@ -20,7 +20,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
   const mainCareer = "Software Engineer";
   const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const [suggestions, setSuggestions] = useState<string>("");
-  const [aboutYou, setAboutYou] = useState<string>(""); // New state for About You text
   const [buttonVisible, setButtonVisible] = useState<boolean>(true);
   const [headerText, setHeaderText] = useState<string>("Career Quiz Results");
   const graphData = [
@@ -32,7 +31,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
     setButtonVisible(false);
-    setHeaderText("Career Quiz Results - About You");
+    setHeaderText("Career Quiz Results");
 
     let all_q: string[] = [];
     let all_a: string[] = [];
@@ -58,17 +57,14 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
     }
 
     // Capture both the career suggestions and about you text
-    GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), (careers, about) => {
+    GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), (careers) => {
       setSuggestions(careers);
-      setAboutYou(about); // Set the About You text
     });
   }
 
   return (
     <div className="results-container">
         <h1>{headerText}</h1>
-
-        {aboutYou && <p className="about-you">{aboutYou}</p>}
 
       <main className="main-content">
         {/* Show button initially and only show results if suggestions are available */}
