@@ -20,6 +20,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
   const mainCareer = "Software Engineer";
   const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const [suggestions, setSuggestions] = useState<string>("");
+  const [buttonVisible, setButtonVisible] = useState<boolean>(true); // New state to control button visibility
   const graphData = [
     { label: 'Software Engineer', score: 80, questions: 7 },
     { label: 'Data Scientist', score: 65, questions: 5 },
@@ -28,6 +29,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
 
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
+    setButtonVisible(false); // Hide button when pressed
     let all_q: string[] = [];
     let all_a: string[] = [];
 
@@ -56,15 +58,15 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
 
   return (
     <div className="results-container">
-      <header className="header">
         <h1>Career Quiz Results</h1>
-      </header>
 
       <main className="main-content">
         {/* Show button initially and only show results if suggestions are available */}
         <section className="career-section">
           <h2>AI-Generated Results</h2>
-          <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
+          {buttonVisible && (
+            <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
+          )}
           {suggestions && (
             <>
               <p>{suggestions.split(`|`)[0]}</p>
@@ -110,11 +112,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
           </>
         )}
       </main>
-  {
-      //<div>
-      //<Button className="reset-button" onClick={() => { bfunc({}); dfunc({}); dfunc2({}); }}>Reset All Quiz Answers</Button>
-      //</div>
-  }
+
       <footer className="footer">
         <p>Career Quiz © 2024</p>
       </footer>
