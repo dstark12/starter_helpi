@@ -113,9 +113,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
         )}
       </main>
 
-      <footer className="footer">
-        <p>Career Quiz © 2024</p>
-      </footer>
     </div>
   );
 };
