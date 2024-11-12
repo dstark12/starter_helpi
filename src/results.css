@@ -14,12 +14,15 @@ body {
   padding: 20px;
 }
 
-/* Header styling */
+.h1{
+  font-size: 30rem;
+  
+}
 .header {
   text-align: center;
   background-color: #007bff;
   color: white;
-  padding: 10px;
+  padding: 20px;
 }
 
 /* Main content styling */
@@ -43,99 +46,14 @@ body {
   color: #000;
 }
 
-/* Text color for why careers were chosen */
-.career-detail p {
-  color: #000; /* Black text for career explanation */
-}
-
-/* Graph section styling */
-.graph-section {
-  margin-bottom: 20px;
-}
-
-.graph {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.bar-container {
-  text-align: center;
-}
-
-.bar {
-  width: 40px;
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  position: relative;
-  transition: height 0.3s ease-in-out;  /* Smooth height change for bar graphs */
-}
-
-.bar-label {
-  position: absolute;
-  bottom: 5px;
-}
-
-.bar-title {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-/* Detailed graph section styling for each career */
-.detailed-graphs-section {
-  margin-bottom: 30px;
-}
-.detailed-graphs-section h3{
-  color: #000;
-}
-
-.career-detail {
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.career-detail h3 {
-  margin-bottom: 10px;
-  color: #007bff;
-}
-
-.detail-graph {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.detail-bar {
-  background-color: #007bff;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: width 0.3s ease-in-out;  /* Smooth width change for horizontal bars */
-}
-
-.detail-bar-label {
-  padding: 5px;
-}
-
 /* Alternatives section styling */
 .alternatives-section ul {
   list-style-type: disc;
   padding-left: 20px;
-  color:#000
+  color: #000;
 }
 
-.alternatives-section h3{
+.alternatives-section h3 {
   color: #000;
 }
 
@@ -147,7 +65,34 @@ body {
   color: white;
 }
 
-.reset-button {
-  margin-top: 1px;
+/* Button styling */
+.career-section .btn {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.career-section .btn:hover {
+  background-color: #0056b3;
+}
+
+/* About You section styling */
+.about-you-section {
   margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.about-you-header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 3rem;
+  color: #333;
+}
+
+.about-you-section p {
+  color: #000;
 }
