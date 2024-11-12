@@ -183,3 +183,7 @@ body {
 .reset-button:hover {
   background-color: #f0f0f0; /* Light background on hover */
 }
+
+.about-you {
+  color: black;
+}

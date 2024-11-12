@@ -20,7 +20,9 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
   const mainCareer = "Software Engineer";
   const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const [suggestions, setSuggestions] = useState<string>("");
-  const [buttonVisible, setButtonVisible] = useState<boolean>(true); // New state to control button visibility
+  const [aboutYou, setAboutYou] = useState<string>(""); // New state for About You text
+  const [buttonVisible, setButtonVisible] = useState<boolean>(true);
+  const [headerText, setHeaderText] = useState<string>("Career Quiz Results");
   const graphData = [
     { label: 'Software Engineer', score: 80, questions: 7 },
     { label: 'Data Scientist', score: 65, questions: 5 },
@@ -29,7 +31,9 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
 
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
-    setButtonVisible(false); // Hide button when pressed
+    setButtonVisible(false);
+    setHeaderText("Career Quiz Results - About You");
+
     let all_q: string[] = [];
     let all_a: string[] = [];
 
@@ -53,12 +57,18 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
       all_q = [...all_q, dq2_list[i]];
     }
 
-    GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), setSuggestions);
+    // Capture both the career suggestions and about you text
+    GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), (careers, about) => {
+      setSuggestions(careers);
+      setAboutYou(about); // Set the About You text
+    });
   }
 
   return (
     <div className="results-container">
-        <h1>Career Quiz Results</h1>
+        <h1>{headerText}</h1>
+
+        {aboutYou && <p className="about-you">{aboutYou}</p>}
 
       <main className="main-content">
         {/* Show button initially and only show results if suggestions are available */}
@@ -112,7 +122,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
           </>
         )}
       </main>
-
     </div>
   );
 };
