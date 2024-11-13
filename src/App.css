@@ -1,3 +1,20 @@
+:root {
+  --quiz-button-color: #00ff4c;
+  --quiz-button-color-hover: #008a29;
+
+  --question-button-color: #585858;
+  --question-button-color-hover: #003369;
+  --question-button-color-selected: #0057b4;
+  --question-button-text-color: #bbbbbb;
+  --question-button-text-color-hover: #ffffff;
+  --question-button-text-color-selected: #ebebeb;
+
+  --header-background-color: #18253d;
+
+  --menu-button-color: #007bff;
+  --menu-button-color-hover: #00356d;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +31,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--header-background-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +43,14 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.menu-button {
+  background-color: var(--menu-button-color);
+}
+
+.menu-button:hover {
+  background-color: var(--menu-button-color-hover);
 }
 
 @keyframes App-logo-spin {

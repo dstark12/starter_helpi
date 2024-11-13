@@ -11,7 +11,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
             <div className="button-container-wrapper">
                 <div className="button-container">
                     <div className="left-button">
-                        <Button 
+                        <Button className="quiz_button"
                             onClick={() => setPage("bquestions")}
                             aria-label="Start Basic Questions Quiz"
                         >
@@ -20,7 +20,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
                         <p>A quiz that gives the user questions with multiple choice response for a quicker, less accurate experience</p>
                     </div>
                     <div className="right-button">
-                        <Button 
+                        <Button className="quiz_button"
                             onClick={() => setPage("dquestions")}
                             aria-label="Start Detailed Questions Quiz"
                         >

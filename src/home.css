@@ -3,6 +3,8 @@ html, body {
     margin: 0; /* Remove default margin */
 }
 
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -45,14 +47,31 @@ p {
 }
 
 /* Add hover effects for the buttons */
-button {
+.quiz_button {
     transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 320px;
+    height: 60px;
+    font-size: 30px;
+    background-color: var(--quiz-button-color);
+}
+
+.quiz_button:hover {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 320px;
+    height: 60px;
+    font-size: 30px;
+    background-color: var(--quiz-button-color-hover);
+}
+
+button {
+    background-color: var(--question-button-color);
+    color: var(--question-button-text-color);
 }
 
 button:hover {
-    background-color: #007bff; /* Bootstrap blue for hover */
+    background-color: var(--question-button-color-hover); /* Bootstrap blue for hover */
     transform: scale(1.05); /* Slight scaling effect */
-    color: white; /* White text on hover */
+    color: var(--question-button-text-color-hover); /* White text on hover */
 }
 
 /* Mobile responsive design */
