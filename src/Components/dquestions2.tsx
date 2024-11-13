@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-
+import '../Styles/dquestions.css';
 
 interface DetailedQuestion {
  id: number;

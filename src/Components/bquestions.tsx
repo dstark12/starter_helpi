@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-
+import '../Styles/bquestions.css';
 interface Question {
   id: number;
   questionText: string;

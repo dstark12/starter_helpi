@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "react-bootstrap";
-import './home.css'; // Import your CSS file
+import '../Styles/home.css'; // Import your CSS file
 
 export function Home({ setPage }: { setPage: (page: string) => void }): React.JSX.Element {
     return (
