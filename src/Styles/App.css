@@ -2,10 +2,11 @@
   --quiz-button-color: #0077ff;
   --quiz-button-color-hover: #015281;
 
-  --question-button-color: #585858;
+  --question-button-color: #e0e0e0;
   --question-button-color-hover: #003369;
   --question-button-color-selected: #0057b4;
-  --question-button-text-color: #bbbbbb;
+  --question-button-text-color: #161616;
+
   --question-button-text-color-hover: #ffffff;
   --question-button-text-color-selected: #ebebeb;
 
