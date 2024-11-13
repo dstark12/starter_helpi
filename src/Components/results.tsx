@@ -21,7 +21,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
   //const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const [suggestions, setSuggestions] = useState<string>("");
   const [buttonVisible, setButtonVisible] = useState<boolean>(true);
-  const [headerText, setHeaderText] = useState<string>("Career Quiz Results");
+  const [headerText, setHeaderText] = useState<string>("Career Quiz Results - About You");
   //const graphData = [
   //  { label: 'Software Engineer', score: 80, questions: 7 },
   //  { label: 'Data Scientist', score: 65, questions: 5 },
