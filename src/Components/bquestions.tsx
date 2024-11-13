@@ -34,9 +34,9 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
 
   const getButtonStyle = (questionId: number, answer: string) => {
     if (answers[questionId] === answer) {
-      return { backgroundColor: 'blue', color: 'white' }; // Change background to blue if clicked
+      return { backgroundColor: "var(--question-button-color-selected)", color: 'var(--question-button-text-color-selected)' }; // Change background to blue if clicked
     }
-    return {}; // Default style
+    return { }; // Default style
   };
 
   const getResults = () => {
