@@ -6,12 +6,43 @@ import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
 import { Dquestions2 } from './dquestions2';
 import { Results } from './results'; // Add Results import
+import { ColorTheme, light_theme, dark_theme } from './Themes';
 
 let keyData = "";
 const saveKeyData = "MYKEY";
 const prevKey = localStorage.getItem(saveKeyData);
 if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
+}
+
+function set_theme(theme: ColorTheme){
+
+  document.documentElement.style.setProperty("--quiz-button-color", theme.quiz_button_color );
+  document.documentElement.style.setProperty("--quiz-button-color-hover", theme.quiz_button_color_hover );
+  document.documentElement.style.setProperty("--quiz-button-disabled", theme.quiz_button_disabled );
+
+  document.documentElement.style.setProperty("--progress-bar-color", theme.progress_bar_color );
+  document.documentElement.style.setProperty("--progress-bar-background", theme.progress_bar_background );
+
+  document.documentElement.style.setProperty("--question-button-color", theme.question_button_color );
+  document.documentElement.style.setProperty("--question-button-color-hover", theme.question_button_color_hover );
+  document.documentElement.style.setProperty("--question-button-color-selected", theme.question_button_color_selected );
+  document.documentElement.style.setProperty("--question-button-text-color", theme.question_button_text_color );
+  document.documentElement.style.setProperty("--question-button-text-color-hover", theme.question_button_text_color_hover );
+  document.documentElement.style.setProperty("--question-button-text-color-selected", theme.question_button_text_color_selected );
+
+  document.documentElement.style.setProperty("--question-wrapper-background", theme.question_wrapper_background );
+  document.documentElement.style.setProperty("--question-wrapper-header-text", theme.question_wrapper_header_text );
+  document.documentElement.style.setProperty("--question-wrapper-text", theme.question_wrapper_text );
+
+  document.documentElement.style.setProperty("--question-item-background", theme.question_item_background );
+  document.documentElement.style.setProperty("--question-item-border", theme.question_item_border );
+  document.documentElement.style.setProperty("--question-item-text", theme.question_item_text );
+
+  document.documentElement.style.setProperty("--header-background-color", theme.header_background_color );
+
+  document.documentElement.style.setProperty("--menu-button-color", theme.menu_button_color );
+  document.documentElement.style.setProperty("--menu-button-color-hover", theme.menu_button_color_hover );
 }
 
 function App() {
@@ -37,6 +68,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <span>
+          <Button onClick={()=>set_theme(dark_theme)}>Change Theme</Button>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>

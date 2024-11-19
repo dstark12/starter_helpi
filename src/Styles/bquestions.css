@@ -12,14 +12,14 @@ html, body {
   width: 95%;
   margin: 40px auto;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: var(--question-wrapper-background);
   border-radius: 10px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 /* Header Styling */
 .basic-question-page h1 {
-  color: #333333;
+  color: var(--question-wrapper-header-text);
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -28,7 +28,7 @@ html, body {
 
 /* Paragraph Styling */
 .basic-question-page p {
-  color: #555555;
+  color: var(--question-wrapper-text);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
@@ -38,7 +38,7 @@ html, body {
 /* Progress Bar Container */
 .progress-bar-container {
   width: 100%;
-  background-color: #e0e0e0;
+  background-color: var(--progress-bar-background);
   height: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -47,7 +47,7 @@ html, body {
 
 /* Progress Bar */
 .progress-bar {
-  background-color: #007bff;
+  background-color: var(--progress-bar-color);
   height: 100%;
   border-radius: 10px;
   transition: width 0.4s ease;
@@ -62,24 +62,25 @@ html, body {
 }
 
 /* Question Item */
-.question-item {
+.bquestion-item {
   padding: 25px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: var(--question-item-background);
+  color: var(--question-item-text);
+  border: 1px solid var(--question-item-border);
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
-.question-item:hover {
+.bquestion-item:hover {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Question Text */
-.question-item p {
+.bquestion-item p {
   margin: 0 0 10px;
   font-size: 1.2rem;
-  color: #333333;
+  color: var(--question-item-text);
   font-weight: 500;
 }
 
@@ -123,7 +124,7 @@ button.secondary:hover {
 
 /* Disabled Button */
 button:disabled {
-  background: #cccccc;
+  background: var(--quiz-button-disabled);
   color: #666666;
   cursor: not-allowed;
   box-shadow: none;

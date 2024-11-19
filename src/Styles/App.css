@@ -1,14 +1,25 @@
 :root {
   --quiz-button-color: #0077ff;
   --quiz-button-color-hover: #015281;
+  --quiz-button-disabled: #aaaaaa;
+
+  --progress-bar-color: #22aa22;
+  --progress-bar-background: #e0e0e0;
 
   --question-button-color: #e0e0e0;
   --question-button-color-hover: #003369;
   --question-button-color-selected: #0057b4;
   --question-button-text-color: #161616;
-
   --question-button-text-color-hover: #ffffff;
   --question-button-text-color-selected: #ebebeb;
+
+  --question-wrapper-background: #ffffff;
+  --question-wrapper-header-text: #333333;
+  --question-wrapper-text: #555555;
+
+  --question-item-background: #ffffff;
+  --question-item-border: #ddd;
+  --question-item-text: #333333;
 
   --header-background-color: #18253d;
 

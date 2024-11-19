@@ -80,7 +80,7 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
   ></div>
 </div>
     {/*Reset Button*/}
-    <Button onClick={()=>{setAnswers({})}}>Reset Answers</Button>
+    <button style={{margin: "0 0 25px"}} onClick={()=>{setAnswers({})}}>Reset Answers</button>
 
      <div className="question-list">
        {detailedQuestions2.map((q, index) => (
