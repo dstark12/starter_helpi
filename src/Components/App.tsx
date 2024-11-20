@@ -55,7 +55,9 @@ function App() {
   const [banswers, setBanswers] = useState<{[key: number]: string}>([]);
   const [danswers, setDanswers] = useState<{[key: number]: string}>([]);
   const [danswers2, setDanswers2] = useState<{[key: number]: string}>([]);
-  const [theme, setTheme] = useState<ColorTheme>(light_theme);
+  const [themeIdx, setThemeIdx] = useState<number>(0);
+
+  let themes = [light_theme, dark_theme];
 
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -67,8 +69,9 @@ function App() {
   }
 
   function toggleTheme(){
-    if (theme === dark_theme){setTheme(light_theme); set_theme(light_theme);}
-    else{setTheme(dark_theme); set_theme(dark_theme);}
+    let new_idx = (themeIdx + 1)%themes.length;
+    setThemeIdx(new_idx);
+    set_theme(themes[new_idx]);
   }
 
   return (
