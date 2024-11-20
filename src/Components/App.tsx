@@ -55,7 +55,7 @@ function App() {
   const [banswers, setBanswers] = useState<{[key: number]: string}>([]);
   const [danswers, setDanswers] = useState<{[key: number]: string}>([]);
   const [danswers2, setDanswers2] = useState<{[key: number]: string}>([]);
-  const [theme, setTheme] = useState<ColorTheme>(dark_theme);
+  const [theme, setTheme] = useState<ColorTheme>(light_theme);
 
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -75,7 +75,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <span>
-          <Button onClick={()=>toggleTheme}>Change Theme</Button>
+          <Button onClick={toggleTheme}>Change Theme</Button>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
