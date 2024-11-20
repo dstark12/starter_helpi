@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import '../Styles/bquestions.css';
 import '../Styles/App.css';
 interface Question {

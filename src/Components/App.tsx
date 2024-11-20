@@ -45,6 +45,7 @@ function set_theme(theme: ColorTheme){
   document.documentElement.style.setProperty("--menu-button-color-hover", theme.menu_button_color_hover );
 }
 
+
 function App() {
   const [key, setKey] = useState<string>(keyData);
   const [page, setPage] = useState<string>("home");
@@ -54,6 +55,7 @@ function App() {
   const [banswers, setBanswers] = useState<{[key: number]: string}>([]);
   const [danswers, setDanswers] = useState<{[key: number]: string}>([]);
   const [danswers2, setDanswers2] = useState<{[key: number]: string}>([]);
+  const [theme, setTheme] = useState<ColorTheme>(dark_theme);
 
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -64,11 +66,16 @@ function App() {
     setKey(event.target.value);
   }
 
+  function toggleTheme(){
+    if (theme === dark_theme){setTheme(light_theme); set_theme(light_theme);}
+    else{setTheme(dark_theme); set_theme(dark_theme);}
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <span>
-          <Button onClick={()=>set_theme(dark_theme)}>Change Theme</Button>
+          <Button onClick={()=>toggleTheme}>Change Theme</Button>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
