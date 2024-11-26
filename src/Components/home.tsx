@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "react-bootstrap";
+import logo from "../logo.webp";
 import '../Styles/home.css'; // Import your CSS file
 
 export function Home({ setPage }: { setPage: (page: string) => void }): React.JSX.Element {
@@ -7,6 +8,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
         <div className="container">
             <header>
                 <h1>Super Fun Career Quiz</h1>
+                <img src={logo} width={200} height={200}></img>
             </header>
             <div className="button-container-wrapper">
                 <div className="button-container">
