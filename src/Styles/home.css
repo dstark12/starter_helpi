@@ -111,4 +111,9 @@ button:hover {
         width: 80%; /* Reduce button width */
         margin-bottom: 20px; /* Add space between stacked buttons */
     }
+    .logo {
+        width: 150px; /* Adjust the size as needed */
+        height: auto;
+        margin-bottom: 20px; /* Add spacing below the logo */
+    }
 }
