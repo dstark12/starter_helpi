@@ -3,7 +3,33 @@ html, body {
     margin: 0; /* Remove default margin */
 }
 
+.home-page {
+    max-width: 1200px;
+    width: 95%;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: var(--question-wrapper-background);
+    border-radius: 10px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
 
+/* Header Styling */
+.home-page h1 {
+    color: var(--question-wrapper-header-text);
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+/* Paragraph Styling */
+.home-page p {
+    color: var(--question-wrapper-text);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 .container {
     display: flex;

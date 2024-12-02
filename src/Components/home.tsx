@@ -4,6 +4,7 @@ import '../Styles/home.css'; // Import your CSS file
 
 export function Home({ setPage }: { setPage: (page: string) => void }): React.JSX.Element {
     return (
+        <div className="home-page">
         <div className="container">
             <header>
                 <h1>Super Fun Career Quiz</h1>
@@ -30,6 +31,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
