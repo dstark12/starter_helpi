@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { GetResponse, utils_answers_to_list, utils_questions_to_list } from './chat';
 import '../Styles/results.css';
+import changeKey from './App';
+import handleSubmit from './App';
 
 function GeneratePromptWithQuestions(questions: string[], answers: string[]): string {
   let pre_prompt = "Based on the answers to the following questions, provide some career suggestions.";
@@ -121,7 +123,15 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
                 */}
           </>
         )}
+        <Form>
+        <Form.Label>API Key:</Form.Label>
+        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+        <br></br>
+        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+      </Form>
+      
       </main>
+      
     </div>
   );
 };
