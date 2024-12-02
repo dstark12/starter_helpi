@@ -2,7 +2,7 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/App.test.tsx
+FAIL src/Tests/bquestions.test.tsx
   ● Test suite failed to run
 
     Your test suite must contain at least one test.
@@ -13,6 +13,18 @@ FAIL src/App.test.tsx
           at Array.map (<anonymous>)
       at Emittery.emit (node_modules/emittery/index.js:258:23)
 
+FAIL src/Tests/dquestions.test.tsx
+  ● Test suite failed to run
+
+    Your test suite must contain at least one test.
+
+      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
+      at node_modules/@jest/core/build/TestScheduler.js:316:17
+      at node_modules/emittery/index.js:260:13
+          at Array.map (<anonymous>)
+      at Emittery.emit (node_modules/emittery/index.js:258:23)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
@@ -27,23 +39,11 @@ All files            |       0 |        0 |       0 |       0 |
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
   dquestions.tsx     |       0 |        0 |       0 |       0 | 10-80             
   dquestions2.tsx    |       0 |        0 |       0 |       0 | 10-86             
-  home.tsx           |       0 |      100 |       0 |       0 | 6-24              
+  home.tsx           |       0 |      100 |       0 |       0 | 7-26              
   results.tsx        |       0 |        0 |       0 |       0 | 7-65              
 ---------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
+Test Suites: 2 failed, 2 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.818 s
+Time:        3.951 s
 Ran all test suites.
-[0;33mOne of your dependencies, babel-preset-react-app, is importing the
-"@babel/plugin-proposal-private-property-in-object" package without
-declaring it in its dependencies. This is currently working because
-"@babel/plugin-proposal-private-property-in-object" is already in your
-node_modules folder for unrelated reasons, but it [1mmay break at any time[0;33m.
-
-babel-preset-react-app is part of the create-react-app project, [1mwhich
-is not maintianed anymore[0;33m. It is thus unlikely that this bug will
-ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
-your devDependencies to work around this error. This will make this message
-go away.[0m
-  
