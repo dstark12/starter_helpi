@@ -74,7 +74,7 @@ export const dark_theme: ColorTheme = {
     question_button_text_color_hover: "#ebebeb",
     question_button_text_color_selected: "#ffffff",
   
-    question_wrapper_background: "#002255",
+    question_wrapper_background: "#0c0d1f",
     question_wrapper_header_text: "#dddddd",
     question_wrapper_text: "#bbbbbb",
   
