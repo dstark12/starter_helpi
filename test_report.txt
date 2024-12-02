@@ -2,7 +2,7 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/Tests/bquestions.test.tsx
+FAIL src/Tests/dquestions.test.tsx
   ● Test suite failed to run
 
     Your test suite must contain at least one test.
@@ -13,7 +13,7 @@ FAIL src/Tests/bquestions.test.tsx
           at Array.map (<anonymous>)
       at Emittery.emit (node_modules/emittery/index.js:258:23)
 
-FAIL src/Tests/dquestions.test.tsx
+FAIL src/Tests/bquestions.test.tsx
   ● Test suite failed to run
 
     Your test suite must contain at least one test.
@@ -45,5 +45,5 @@ All files            |       0 |        0 |       0 |       0 |
 Test Suites: 2 failed, 2 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        3.951 s
+Time:        3.88 s
 Ran all test suites.
