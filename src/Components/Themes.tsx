@@ -82,7 +82,7 @@ export const dark_theme: ColorTheme = {
     question_item_border: "#000000",
     question_item_text: "#dddddd",
   
-    header_background_color: "#0c131f",
+    header_background_color: "#060710",
   
     menu_button_color: "#007bff",
     menu_button_color_hover: "#00356d"
