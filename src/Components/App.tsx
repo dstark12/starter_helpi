@@ -83,7 +83,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Change Theme</Button>
+      <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
         <span>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
