@@ -54,6 +54,7 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
    setQuestions(detailedQuestions2);
    setGlobalAnswers(answers);
    setPage('dquestions');
+   window.scrollTo(0,0);
  };
 
 
@@ -61,6 +62,7 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
    setQuestions(detailedQuestions2);
    setGlobalAnswers(answers);
    setPage('results');
+   window.scrollTo(0,0);
  };
 
 

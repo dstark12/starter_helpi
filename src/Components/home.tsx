@@ -15,7 +15,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
                 <div className="button-container">
                     <div className="left-button">
                         <Button className="quiz_button"
-                            onClick={() => setPage("bquestions")}
+                            onClick={() => {setPage("bquestions"); window.scrollTo(0,0);}}
                             aria-label="Start Basic Questions Quiz"
                         >
                             Basic Questions
@@ -24,7 +24,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
                     </div>
                     <div className="right-button">
                         <Button className="quiz_button"
-                            onClick={() => setPage("dquestions")}
+                            onClick={() => {setPage("dquestions"); window.scrollTo(0,0);}}
                             aria-label="Start Detailed Questions Quiz"
                         >
                             Detailed Questions

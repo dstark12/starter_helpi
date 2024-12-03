@@ -87,7 +87,7 @@ export const dark_theme: ColorTheme = {
     question_button_text_color_selected: "#ffffff",
 
     question_input_background: "#666666",
-    question_input_border: "#ddd",
+    question_input_border: "#808080",
     question_input_text: "#ffffff",
     question_input_text_placeholder: "#e0e0d0",
     question_input_border_focus: "#007bff",

@@ -48,6 +48,7 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
    setQuestions(detailedQuestions);
    setGlobalAnswers(answers);
    setPage('dquestions2');
+   window.scrollTo(0,0);
  };
 
 

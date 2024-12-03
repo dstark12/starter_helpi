@@ -46,6 +46,7 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
     setGlobalAnswers(answers);
     console.log('User answers:', answers);
     setPage('results');
+    window.scrollTo(0,0);
     // Example: You can integrate GPT or further process the answers here
 
   };
@@ -101,8 +102,8 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
       <button onClick={getResults} disabled={answeredQuestions !== totalQuestions}>
         Get Answer
       </button>
-      <button onClick={() => setPage('home')}>Go Back to Home</button>
-      <button onClick={() => setPage('dquestions')} disabled={answeredQuestions !== totalQuestions}>
+      <button onClick={() => {setPage('home'); window.scrollTo(0,0);}}>Go Back to Home</button>
+      <button onClick={() => {setPage('dquestions'); window.scrollTo(0,0);}} disabled={answeredQuestions !== totalQuestions}>
         Next Page
       </button>
     </div>
