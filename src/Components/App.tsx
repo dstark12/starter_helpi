@@ -31,6 +31,12 @@ function set_theme(theme: ColorTheme){
   document.documentElement.style.setProperty("--question-button-text-color-hover", theme.question_button_text_color_hover );
   document.documentElement.style.setProperty("--question-button-text-color-selected", theme.question_button_text_color_selected );
 
+  document.documentElement.style.setProperty("--question-input-background", theme.question_input_background );
+  document.documentElement.style.setProperty("--question-input-text", theme.question_input_text );
+  document.documentElement.style.setProperty("--question-input-text-placeholder", theme.question_input_text_placeholder );
+  document.documentElement.style.setProperty("--question-input-border", theme.question_input_border );
+  document.documentElement.style.setProperty("--question-input-border-focus", theme.question_input_border_focus );
+
   document.documentElement.style.setProperty("--question-wrapper-background", theme.question_wrapper_background );
   document.documentElement.style.setProperty("--question-wrapper-header-text", theme.question_wrapper_header_text );
   document.documentElement.style.setProperty("--question-wrapper-text", theme.question_wrapper_text );
@@ -77,8 +83,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Change Theme</Button>
         <span>
-          <Button onClick={toggleTheme}>Change Theme</Button>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
@@ -89,13 +95,23 @@ function App() {
         {page === "dquestions" ? <Dquestions page={page} setPage={setPage} setQuestions={setDq} GlobalAnswers={danswers} setGlobalAnswers={setDanswers}/> : null}
         {page === "dquestions2" ? <Dquestions2 page={page} setPage={setPage} setQuestions={setDq2} GlobalAnswers={danswers2} setGlobalAnswers={setDanswers2}/> : null}
         {page === "results" ? <Results apikey={key} bq={bq} ba={banswers} dq={dq} da={danswers} dq2={dq2} da2={danswers2} bfunc={setBanswers} dfunc={setDanswers} dfunc2={setDanswers2}/> : null} {/* Add Results Page */}
+
+
+        <div className="api-key">
+          
+          <Form>
+          <Form.Label style={{color: "var(--question-wrapper-header-text"}}>API Key:</Form.Label>
+          <div className="api-key-wrapper">
+          <Form.Control className="api-key-input" type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+          <br></br>
+          <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+          </div>
+          </Form>
+          
+        </div>
+
       </header>
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
-      </Form>
+      
     </div>
   );
 }

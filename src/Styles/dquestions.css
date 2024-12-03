@@ -5,6 +5,7 @@
     margin: 40px auto;           
     padding: 40px;               
     font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease;
     background-color: var(--question-wrapper-background);
     border-radius: 10px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
@@ -12,6 +13,7 @@
 
 /* Header */
 .detailed-question-page h1 {
+    transition: all 0.3s ease;
     color: var(--question-wrapper-header-text);
     text-align: center;
     font-size: 2.5rem;           
@@ -21,6 +23,7 @@
 
 /* Description paragraph */
 .detailed-question-page p {
+    transition: all 0.3s ease;
     color: var(--question-wrapper-text);
     font-size: 1.1rem;           
     line-height: 1.6;
@@ -31,6 +34,7 @@
 /* Progress bar container */
 .progress-bar-container {
     width: 100%;
+    transition: all 0.3s ease;
     background-color: var(--progress-bar-background);
     height: 20px;
     border-radius: 10px;
@@ -40,6 +44,7 @@
 
 /* Progress bar */
 .progress-bar {
+    transition: all 0.3s ease;
     background-color: var(--progress-bar-color);
     height: 100%;
     border-radius: 10px;
@@ -56,7 +61,8 @@
 
 /* Question item */
 .question-item {
-    padding: 25px;               
+    padding: 25px;    
+    transition: all 0.3s ease;           
     background-color: var(--question-item-background);
     color: var(--question-item-text);
     border: 1px solid var(--question-item-border);
@@ -72,7 +78,8 @@
 /* Question text */
 .question-item p {
     margin: 0 0 10px;
-    font-size: 1.2rem;           
+    font-size: 1.2rem;    
+    transition: all 0.3s ease;       
     color: var(--question-item-text);
     font-weight: 500;
 }
@@ -81,8 +88,11 @@
 .question-item input[type="text"] {
     width: 100%;
     padding: 12px;               
-    font-size: 1rem;             
-    border: 1px solid #ddd;
+    font-size: 1rem;  
+    transition: all 0.3s ease; 
+    color: var(--question-input-text);          
+    background-color: var(--question-input-background);
+    border: 1px solid var(--question-input-border);
     border-radius: 6px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
@@ -91,8 +101,14 @@
 
 /* Input field focus effect */
 .question-item input[type="text"]:focus {
-    border-color: #007bff;
+    transition: all 0.3s ease;
+    border-color: var(--question-input-border-focus);
     box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.question-item input[type="text"]::placeholder {
+    transition: all 0.3s ease;
+    color: var(--question-input-text-placeholder);
 }
 
 /* Reset button styling */

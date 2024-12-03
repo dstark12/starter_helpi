@@ -68,7 +68,7 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
    <div className="detailed-question-page">
      <h1>Detailed Career Questions - Page 2</h1>
     {/* Progress Bar */}
-    <div style={{ width: '100%', backgroundColor: '#e0e0e0', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+    <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
     style={{
       width: `${progress}%`,
