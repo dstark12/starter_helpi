@@ -46,6 +46,7 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
     setGlobalAnswers(answers);
     console.log('User answers:', answers);
     setPage('results');
+    window.scrollTo(0,0);
     // Example: You can integrate GPT or further process the answers here
 
   };
@@ -62,7 +63,7 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
       <h1>Basic Career Questions</h1>
       <p>This quiz helps you explore your career interests by asking a series of multiple-choice questions about your preferences and working style. You will be presented with questions covering topics like technology, creativity, collaboration, and work-life balance. By selecting your answers, you'll gain insights into potential career paths that align with your strengths and preferences. Simply choose from 'Yes', 'No', or 'I Don't Know' for each question, and see how your responses shape your career profile!</p>
       {/* Progress bar */}
-      <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <div style={{ width: '100%', transition: 'all 0.3s ease;', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
         <div
           style={{
             width: `${progress}%`,
@@ -101,8 +102,8 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
       <button onClick={getResults} disabled={answeredQuestions !== totalQuestions}>
         Get Answer
       </button>
-      <button onClick={() => setPage('home')}>Go Back to Home</button>
-      <button onClick={() => setPage('dquestions')} disabled={answeredQuestions !== totalQuestions}>
+      <button onClick={() => {setPage('home'); window.scrollTo(0,0);}}>Go Back to Home</button>
+      <button onClick={() => {setPage('dquestions'); window.scrollTo(0,0);}} disabled={answeredQuestions !== totalQuestions}>
         Next Page
       </button>
     </div>

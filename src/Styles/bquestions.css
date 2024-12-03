@@ -12,6 +12,7 @@ html, body {
   width: 95%;
   margin: 40px auto;
   padding: 40px;
+  transition: all 0.3s ease;
   background-color: var(--question-wrapper-background);
   border-radius: 10px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
@@ -19,6 +20,7 @@ html, body {
 
 /* Header Styling */
 .basic-question-page h1 {
+  transition: all 0.3s ease;
   color: var(--question-wrapper-header-text);
   text-align: center;
   font-size: 2.5rem;
@@ -28,6 +30,7 @@ html, body {
 
 /* Paragraph Styling */
 .basic-question-page p {
+  transition: all 0.3s ease;
   color: var(--question-wrapper-text);
   font-size: 1.1rem;
   line-height: 1.6;
@@ -38,6 +41,7 @@ html, body {
 /* Progress Bar Container */
 .progress-bar-container {
   width: 100%;
+  transition: all 0.3s ease;
   background-color: var(--progress-bar-background);
   height: 20px;
   border-radius: 10px;
@@ -47,6 +51,7 @@ html, body {
 
 /* Progress Bar */
 .progress-bar {
+  transition: all 0.3s ease;
   background-color: var(--progress-bar-color);
   height: 100%;
   border-radius: 10px;
@@ -64,6 +69,7 @@ html, body {
 /* Question Item */
 .bquestion-item {
   padding: 25px;
+  transition: all 0.3s ease;
   background-color: var(--question-item-background);
   color: var(--question-item-text);
   border: 1px solid var(--question-item-border);
@@ -81,6 +87,7 @@ html, body {
   margin: 0 0 10px;
   font-size: 1.2rem;
   color: var(--question-item-text);
+  transition: all 0.3s ease;
   font-weight: 500;
 }
 

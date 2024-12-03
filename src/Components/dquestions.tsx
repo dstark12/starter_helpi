@@ -48,6 +48,7 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
    setQuestions(detailedQuestions);
    setGlobalAnswers(answers);
    setPage('dquestions2');
+   window.scrollTo(0,0);
  };
 
 
@@ -56,7 +57,7 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
      <h1>Detailed Career Questions</h1>
      <p>This isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.</p>
  {/* Progress Bar */}
- <div style={{ width: '100%', backgroundColor: '#e0e0e0', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+ <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
     style={{
       width: `${progress}%`,
