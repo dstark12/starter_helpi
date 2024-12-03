@@ -2,7 +2,7 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/Tests/dquestions.test.tsx
+FAIL src/Tests/bquestions.test.tsx
   ● Test suite failed to run
 
     Your test suite must contain at least one test.
@@ -13,7 +13,7 @@ FAIL src/Tests/dquestions.test.tsx
           at Array.map (<anonymous>)
       at Emittery.emit (node_modules/emittery/index.js:258:23)
 
-FAIL src/Tests/bquestions.test.tsx
+FAIL src/Tests/dquestions.test.tsx
   ● Test suite failed to run
 
     Your test suite must contain at least one test.
@@ -33,17 +33,17 @@ All files            |       0 |        0 |       0 |       0 |
   index.tsx          |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
  src/Components      |       0 |        0 |       0 |       0 |                   
-  App.tsx            |       0 |        0 |       0 |       0 | 11-85             
-  Themes.tsx         |       0 |      100 |     100 |       0 | 33-62             
-  bquestions.tsx     |       0 |        0 |       0 |       0 | 9-105             
+  App.tsx            |       0 |        0 |       0 |       0 | 11-91             
+  Themes.tsx         |       0 |      100 |     100 |       0 | 39-74             
+  bquestions.tsx     |       0 |        0 |       0 |       0 | 9-106             
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
-  dquestions.tsx     |       0 |        0 |       0 |       0 | 10-80             
-  dquestions2.tsx    |       0 |        0 |       0 |       0 | 10-86             
-  home.tsx           |       0 |      100 |       0 |       0 | 7-26              
+  dquestions.tsx     |       0 |        0 |       0 |       0 | 10-81             
+  dquestions2.tsx    |       0 |        0 |       0 |       0 | 10-88             
+  home.tsx           |       0 |      100 |       0 |       0 | 7-27              
   results.tsx        |       0 |        0 |       0 |       0 | 7-65              
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 2 failed, 2 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        3.88 s
+Time:        3.767 s
 Ran all test suites.
