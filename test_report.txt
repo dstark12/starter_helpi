@@ -14,36 +14,1307 @@ FAIL src/Tests/bquestions.test.tsx
       at Emittery.emit (node_modules/emittery/index.js:258:23)
 
 FAIL src/Tests/dquestions.test.tsx
-  ● Test suite failed to run
+  ● Console
 
-    Your test suite must contain at least one test.
+    console.error
+      Error: Not implemented: window.scrollTo
+          at module.exports (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/browser/not-implemented.js:9:17)
+          at scrollTo (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/browser/Window.js:866:7)
+          at getNextPage (/home/runner/work/starter_helpi/starter_helpi/src/Components/dquestions.tsx:51:11)
+          at HTMLUnknownElement.callCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+          at HTMLUnknownElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLUnknownElementImpl._dispatch (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLUnknownElementImpl.dispatchEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLUnknownElement.dispatchEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.invokeGuardedCallbackDev (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+          at invokeGuardedCallback (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+          at invokeGuardedCallbackAndCatchFirstError (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:4291:25)
+          at executeDispatch (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9041:3)
+          at processDispatchQueueItemsInOrder (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9073:7)
+          at processDispatchQueue (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9086:5)
+          at dispatchEventsForPlugins (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9097:3)
+          at /home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9288:12
+          at batchedUpdates$1 (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:26140:12)
+          at batchedUpdates (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:3991:12)
+          at dispatchEventForPluginEventSystem (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:9287:3)
+          at dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:6465:5)
+          at dispatchEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:6457:5)
+          at dispatchDiscreteEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/react-dom/cjs/react-dom.development.js:6430:5)
+          at HTMLDivElement.callTheUserObjectsOperation (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+          at innerInvokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+          at invokeEventListeners (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+          at HTMLButtonElementImpl._dispatch (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+          at HTMLButtonElementImpl.dispatchEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+          at HTMLButtonElement.dispatchEvent (/home/runner/work/starter_helpi/starter_helpi/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+          at Object.<anonymous> (/home/runner/work/starter_helpi/starter_helpi/src/Tests/dquestions.test.tsx:120:20)
+          at Promise.then.completed (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:391:28)
+          at new Promise (<anonymous>)
+          at callAsyncCircusFn (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/utils.js:316:10)
+          at _callCircusTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:218:40)
+          at processTicksAndRejections (node:internal/process/task_queues:96:5)
+          at _runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:155:3)
+          at _runTestsForDescribeBlock (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:66:9)
+          at _runTestsForDescribeBlock (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:60:9)
+          at run (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/run.js:25:3)
+          at runAndTransformResultsToJestFormat (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+          at jestAdapter (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+          at runTestInternal (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:389:16)
+          at runTest (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/runTest.js:475:34)
+          at Object.worker (/home/runner/work/starter_helpi/starter_helpi/node_modules/jest-runner/build/testWorker.js:133:12) undefined
 
-      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
-      at node_modules/@jest/core/build/TestScheduler.js:316:17
-      at node_modules/emittery/index.js:260:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:258:23)
+      49 |    setGlobalAnswers(answers);
+      50 |    setPage('dquestions2');
+    > 51 |    window.scrollTo(0,0);
+         |           ^
+      52 |  };
+      53 |
+      54 |
+
+      at VirtualConsole.<anonymous> (node_modules/jsdom/lib/jsdom/virtual-console.js:29:45)
+      at module.exports (node_modules/jsdom/lib/jsdom/browser/not-implemented.js:12:26)
+      at scrollTo (node_modules/jsdom/lib/jsdom/browser/Window.js:866:7)
+      at getNextPage (src/Components/dquestions.tsx:51:11)
+      at HTMLUnknownElement.callCallback (node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+      at HTMLUnknownElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLUnknownElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLUnknownElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLUnknownElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.invokeGuardedCallbackDev (node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+      at invokeGuardedCallback (node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+      at invokeGuardedCallbackAndCatchFirstError (node_modules/react-dom/cjs/react-dom.development.js:4291:25)
+      at executeDispatch (node_modules/react-dom/cjs/react-dom.development.js:9041:3)
+      at processDispatchQueueItemsInOrder (node_modules/react-dom/cjs/react-dom.development.js:9073:7)
+      at processDispatchQueue (node_modules/react-dom/cjs/react-dom.development.js:9086:5)
+      at dispatchEventsForPlugins (node_modules/react-dom/cjs/react-dom.development.js:9097:3)
+      at node_modules/react-dom/cjs/react-dom.development.js:9288:12
+      at batchedUpdates$1 (node_modules/react-dom/cjs/react-dom.development.js:26140:12)
+      at batchedUpdates (node_modules/react-dom/cjs/react-dom.development.js:3991:12)
+      at dispatchEventForPluginEventSystem (node_modules/react-dom/cjs/react-dom.development.js:9287:3)
+      at dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (node_modules/react-dom/cjs/react-dom.development.js:6465:5)
+      at dispatchEvent (node_modules/react-dom/cjs/react-dom.development.js:6457:5)
+      at dispatchDiscreteEvent (node_modules/react-dom/cjs/react-dom.development.js:6430:5)
+      at HTMLDivElement.callTheUserObjectsOperation (node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+      at innerInvokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:338:25)
+      at invokeEventListeners (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:274:3)
+      at HTMLButtonElementImpl._dispatch (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:221:9)
+      at HTMLButtonElementImpl.dispatchEvent (node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:94:17)
+      at HTMLButtonElement.dispatchEvent (node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:231:34)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:120:20)
+
+  ● Dquestions Component › renders the component correctly
+
+    TestingLibraryElementError: Unable to find an element with the text: Do you prefer managing projects where you have full control, or do you thrive in collaborative environments?. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"detailed-question-page"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mDetailed Career Questions[0m
+          [36m</h1>[39m
+          [36m<p>[39m
+            [0mThis isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.[0m
+          [36m</p>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"width: 100%; height: 20px; border-radius: 10px; margin-bottom: 20px;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"width: 0%; background-color: green; height: 100%; border-radius: 10px;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+          [36m>[39m
+            [0mReset Answers[0m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"question-list"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m1[0m
+                [0m. [0m
+                [0mDo you prefer managing projects where you have full control, or do you thrive in collaborative environments?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m2[0m
+                [0m. [0m
+                [0mHow comfortable are you with learning new programming languages or technical skills on your own?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m3[0m
+                [0m. [0m
+                [0mWould you prefer a job where you regularly interact with clients, or a more isolated role focused on individual tasks?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m4[0m
+                [0m. [0m
+                [0mDo you enjoy analyzing data and making decisions based on metrics, or do you rely more on intuition?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m5[0m
+                [0m. [0m
+                [0mAre you willing to work long hours if it means faster career advancement, or do you prioritize work-life balance?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m6[0m
+                [0m. [0m
+                [0mWould you rather work in a rapidly changing industry where you must constantly adapt, or a stable field with established practices?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m7[0m
+                [0m. [0m
+                [0mDo you see yourself in a leadership role within five years, or do you prefer staying in technical or specialized positions?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m8[0m
+                [0m. [0m
+                [0mWould you be comfortable with making high-stakes decisions that could have a significant impact on the company?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m9[0m
+                [0m. [0m
+                [0mHow much does the culture and mission of a company influence your decision to work there?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m10[0m
+                [0m. [0m
+                [0mAre you more motivated by financial compensation, or by the opportunity to work on meaningful projects?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mdisabled[39m=[32m""[39m
+          [36m>[39m
+            [0mGo To Next Page[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      26 |
+      27 |     // Check for the first question
+    > 28 |     const firstQuestion = screen.getByText(
+         |                                  ^
+      29 |       detailedQuestions[0].questionText
+      30 |     );
+      31 |     expect(firstQuestion).not.toBeNull();
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:28:34)
+
+  ● Dquestions Component › renders all questions
+
+    TestingLibraryElementError: Unable to find an element with the text: Do you prefer managing projects where you have full control, or do you thrive in collaborative environments?. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"detailed-question-page"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mDetailed Career Questions[0m
+          [36m</h1>[39m
+          [36m<p>[39m
+            [0mThis isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.[0m
+          [36m</p>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"width: 100%; height: 20px; border-radius: 10px; margin-bottom: 20px;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"width: 0%; background-color: green; height: 100%; border-radius: 10px;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+          [36m>[39m
+            [0mReset Answers[0m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"question-list"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m1[0m
+                [0m. [0m
+                [0mDo you prefer managing projects where you have full control, or do you thrive in collaborative environments?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m2[0m
+                [0m. [0m
+                [0mHow comfortable are you with learning new programming languages or technical skills on your own?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m3[0m
+                [0m. [0m
+                [0mWould you prefer a job where you regularly interact with clients, or a more isolated role focused on individual tasks?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m4[0m
+                [0m. [0m
+                [0mDo you enjoy analyzing data and making decisions based on metrics, or do you rely more on intuition?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m5[0m
+                [0m. [0m
+                [0mAre you willing to work long hours if it means faster career advancement, or do you prioritize work-life balance?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m6[0m
+                [0m. [0m
+                [0mWould you rather work in a rapidly changing industry where you must constantly adapt, or a stable field with established practices?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m7[0m
+                [0m. [0m
+                [0mDo you see yourself in a leadership role within five years, or do you prefer staying in technical or specialized positions?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m8[0m
+                [0m. [0m
+                [0mWould you be comfortable with making high-stakes decisions that could have a significant impact on the company?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m9[0m
+                [0m. [0m
+                [0mHow much does the culture and mission of a company influence your decision to work there?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m10[0m
+                [0m. [0m
+                [0mAre you more motivated by financial compensation, or by the opportunity to work on meaningful projects?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mdisabled[39m=[32m""[39m
+          [36m>[39m
+            [0mGo To Next Page[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      52 |
+      53 |     detailedQuestions.forEach((q) => {
+    > 54 |       const questionElement = screen.getByText(q.questionText);
+         |                                      ^
+      55 |       expect(questionElement).not.toBeNull();
+      56 |     });
+      57 |   });
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at forEach (src/Tests/dquestions.test.tsx:54:38)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:53:23)
+
+  ● Dquestions Component › handles input changes
+
+    expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+    Expected: {"1": "I prefer collaborative environments."}
+
+    Number of calls: 0
+
+      79 |
+      80 |     // Ensure `setGlobalAnswers` is called with the correct values
+    > 81 |     expect(mockSetGlobalAnswers).toHaveBeenCalledWith({ 1: sampleAnswer });
+         |                                  ^
+      82 |   });
+      83 |
+      84 |   test("displays progress bar correctly", () => {
+
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:81:34)
+
+  ● Dquestions Component › displays progress bar correctly
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "progressbar"
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "Detailed Career Questions":
+      [36m<h1 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "Reset Answers":
+      [36m<button[39m
+        [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+      [36m/>[39m
+
+      Name "Go To Next Page":
+      [36m<button[39m
+        [33mdisabled[39m=[32m""[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+      textbox:
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Answer 1"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"detailed-question-page"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mDetailed Career Questions[0m
+          [36m</h1>[39m
+          [36m<p>[39m
+            [0mThis isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.[0m
+          [36m</p>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"width: 100%; height: 20px; border-radius: 10px; margin-bottom: 20px;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"width: 10%; background-color: green; height: 100%; border-radius: 10px;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+          [36m>[39m
+            [0mReset Answers[0m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"question-list"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m1[0m
+                [0m. [0m
+                [0mDo you prefer managing projects where you have full control, or do you thrive in collaborative environments?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Answer 1"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m2[0m
+                [0m. [0m
+                [0mHow comfortable are you with learning new programming languages or technical skills on your own?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m3[0m
+                [0m. [0m
+                [0mWould you prefer a job where you regularly interact with clients, or a more isolated role focused on individual tasks?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m4[0m
+                [0m. [0m
+                [0mDo you enjoy analyzing data and making decisions based on metrics, or do you rely more on intuition?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m5[0m
+                [0m. [0m
+                [0mAre you willing to work long hours if it means faster career advancement, or do you prioritize work-life balance?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m6[0m
+                [0m. [0m
+                [0mWould you rather work in a rapidly changing industry where you must constantly adapt, or a stable field with established practices?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m7[0m
+                [0m. [0m
+                [0mDo you see yourself in a leadership role within five years, or do you prefer staying in technical or specialized positions?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m8[0m
+                [0m. [0m
+                [0mWould you be comfortable with making high-stakes decisions that could have a significant impact on the company?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m9[0m
+                [0m. [0m
+                [0mHow much does the culture and mission of a company influence your decision to work there?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m10[0m
+                [0m. [0m
+                [0mAre you more motivated by financial compensation, or by the opportunity to work on meaningful projects?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m""[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mdisabled[39m=[32m""[39m
+          [36m>[39m
+            [0mGo To Next Page[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      93 |     );
+      94 |
+    > 95 |     const progressBar = screen.getByRole("progressbar");
+         |                                ^
+      96 |     expect(progressBar.style.width).toBe("10%"); // Assuming 10% progress for 1 answered question
+      97 |   });
+      98 |
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByRole (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:95:32)
+
+  ● Dquestions2 Component › renders all questions from the second page
+
+    TestingLibraryElementError: Unable to find an element with the text: Do you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"detailed-question-page"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mDetailed Career Questions - Page 2[0m
+          [36m</h1>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"width: 100%; height: 20px; border-radius: 10px; margin-bottom: 20px;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"width: 100%; background-color: green; height: 100%; border-radius: 10px;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+          [36m>[39m
+            [0mReset Answers[0m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"question-list"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m11[0m
+                [0m. [0m
+                [0mDo you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 1"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m12[0m
+                [0m. [0m
+                [0mWould you rather work for a small startup where you wear many hats, or a large corporation with more defined roles?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 2"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m13[0m
+                [0m. [0m
+                [0mHow important is job stability to you when considering career options?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 3"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m14[0m
+                [0m. [0m
+                [0mDo you enjoy problem-solving through hands-on experimentation, or do you prefer researching and analyzing before taking action?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 4"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m15[0m
+                [0m. [0m
+                [0mWould you consider relocating for a job if it offered a significant opportunity for growth?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 5"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m16[0m
+                [0m. [0m
+                [0mDo you thrive in roles that require constant communication, or do you prefer tasks that allow you to work independently?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 6"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m17[0m
+                [0m. [0m
+                [0mAre you comfortable with taking on roles that require a high degree of risk, or do you prefer more predictable and secure positions?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 7"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m18[0m
+                [0m. [0m
+                [0mDo you value the opportunity to travel for work, or would you rather have a role that keeps you closer to home?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 8"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m19[0m
+                [0m. [0m
+                [0mHow important is mentorship and professional development when choosing a job?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 9"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m20[0m
+                [0m. [0m
+                [0mDo you prefer working on projects that have a clear end date, or do you enjoy ongoing, long-term responsibilities?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 10"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<p>[39m
+            [0mAll questions completed! You can now see your results!.[0m
+          [36m</p>[39m
+          [36m<button>[39m
+            [0mPrevious Page[0m
+          [36m</button>[39m
+          [36m<button>[39m
+            [0mSee Results[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      160 |       Object.entries(mockGlobalAnswers).forEach(([id, answer]) => {
+      161 |         const questionText = `Do you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?`;
+    > 162 |         expect(screen.getByText(questionText)).toBeInTheDocument();
+          |                       ^
+      163 |       });
+      164 |     });
+      165 |   
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at forEach (src/Tests/dquestions.test.tsx:162:23)
+          at Array.forEach (<anonymous>)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:160:41)
+
+  ● Dquestions2 Component › displays the progress bar
+
+    TestingLibraryElementError: Unable to find an accessible element with the role "progressbar"
+
+    Here are the accessible roles:
+
+      heading:
+
+      Name "Detailed Career Questions - Page 2":
+      [36m<h1 />[39m
+
+      --------------------------------------------------
+      button:
+
+      Name "Reset Answers":
+      [36m<button[39m
+        [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+      [36m/>[39m
+
+      Name "Previous Page":
+      [36m<button />[39m
+
+      Name "See Results":
+      [36m<button />[39m
+
+      --------------------------------------------------
+      textbox:
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 1"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 2"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 3"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 4"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 5"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 6"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 7"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 8"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 9"[39m
+      [36m/>[39m
+
+      Name "":
+      [36m<input[39m
+        [33mplaceholder[39m=[32m"Enter your answer here"[39m
+        [33mtype[39m=[32m"text"[39m
+        [33mvalue[39m=[32m"Sample answer 10"[39m
+      [36m/>[39m
+
+      --------------------------------------------------
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"detailed-question-page"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mDetailed Career Questions - Page 2[0m
+          [36m</h1>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"width: 100%; height: 20px; border-radius: 10px; margin-bottom: 20px;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"width: 100%; background-color: green; height: 100%; border-radius: 10px;"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33mstyle[39m=[32m"margin: 0px 0px 25px;"[39m
+          [36m>[39m
+            [0mReset Answers[0m
+          [36m</button>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"question-list"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m11[0m
+                [0m. [0m
+                [0mDo you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 1"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m12[0m
+                [0m. [0m
+                [0mWould you rather work for a small startup where you wear many hats, or a large corporation with more defined roles?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 2"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m13[0m
+                [0m. [0m
+                [0mHow important is job stability to you when considering career options?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 3"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m14[0m
+                [0m. [0m
+                [0mDo you enjoy problem-solving through hands-on experimentation, or do you prefer researching and analyzing before taking action?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 4"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m15[0m
+                [0m. [0m
+                [0mWould you consider relocating for a job if it offered a significant opportunity for growth?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 5"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m16[0m
+                [0m. [0m
+                [0mDo you thrive in roles that require constant communication, or do you prefer tasks that allow you to work independently?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 6"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m17[0m
+                [0m. [0m
+                [0mAre you comfortable with taking on roles that require a high degree of risk, or do you prefer more predictable and secure positions?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 7"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m18[0m
+                [0m. [0m
+                [0mDo you value the opportunity to travel for work, or would you rather have a role that keeps you closer to home?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 8"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m19[0m
+                [0m. [0m
+                [0mHow important is mentorship and professional development when choosing a job?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 9"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"question-item"[39m
+            [36m>[39m
+              [36m<p>[39m
+                [0m20[0m
+                [0m. [0m
+                [0mDo you prefer working on projects that have a clear end date, or do you enjoy ongoing, long-term responsibilities?[0m
+              [36m</p>[39m
+              [36m<input[39m
+                [33mplaceholder[39m=[32m"Enter your answer here"[39m
+                [33mtype[39m=[32m"text"[39m
+                [33mvalue[39m=[32m"Sample answer 10"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<p>[39m
+            [0mAll questions completed! You can now see your results!.[0m
+          [36m</p>[39m
+          [36m<button>[39m
+            [0mPrevious Page[0m
+          [36m</button>[39m
+          [36m<button>[39m
+            [0mSee Results[0m
+          [36m</button>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+      176 |   
+      177 |       // Verify if progress bar is rendered
+    > 178 |       const progressBar = screen.getByRole("progressbar");
+          |                                  ^
+      179 |       expect(progressBar).toBeInTheDocument();
+      180 |     });
+      181 |   
+
+      at Object.getElementError (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByRole (node_modules/@testing-library/react/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/Tests/dquestions.test.tsx:178:34)
 
 A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |       0 |        0 |       0 |       0 |                   
+All files            |   15.54 |    23.52 |    20.4 |   13.88 |                   
  src                 |       0 |        0 |       0 |       0 |                   
   index.tsx          |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |       0 |        0 |       0 |       0 |                   
-  App.tsx            |       0 |        0 |       0 |       0 | 11-91             
+ src/Components      |   16.48 |    26.66 |   21.27 |   14.79 |                   
+  App.tsx            |       0 |        0 |       0 |       0 | 12-94             
   Themes.tsx         |       0 |      100 |     100 |       0 | 39-74             
   bquestions.tsx     |       0 |        0 |       0 |       0 | 9-106             
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
-  dquestions.tsx     |       0 |        0 |       0 |       0 | 10-81             
-  dquestions2.tsx    |       0 |        0 |       0 |       0 | 10-88             
+  dquestions.tsx     |   84.21 |      100 |    62.5 |   82.35 | 37,71,81          
+  dquestions2.tsx    |   58.33 |      100 |   55.55 |   52.38 | 43,54-57,62-65,84 
   home.tsx           |       0 |      100 |       0 |       0 | 7-27              
   results.tsx        |       0 |        0 |       0 |       0 | 7-65              
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 2 failed, 2 total
-Tests:       0 total
+Tests:       6 failed, 4 passed, 10 total
 Snapshots:   0 total
-Time:        3.767 s
+Time:        4.567 s
 Ran all test suites.
