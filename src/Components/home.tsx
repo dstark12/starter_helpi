@@ -9,9 +9,10 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
         <div className="container">
             <header>
                 <h1>Super Fun Career Quiz</h1>
-                <img src={logo} alt="Logo" className="logo" />
+                <img style={{width: "75%", aspectRatio: 1}} src={logo} alt="Logo" className="logo" />
             </header>
             <div className="button-container-wrapper">
+                
                 <div className="button-container">
                     <div className="left-button">
                         <Button className="quiz_button"
