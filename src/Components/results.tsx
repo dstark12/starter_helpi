@@ -49,7 +49,6 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
       all_q = [...all_q, dq2_list[i]];
     }
 
-    // Capture both the career suggestions and about you text
     GetResponse(apikey, GeneratePromptWithQuestions(all_q, all_a), (careers) => {
       setSuggestions(careers);
     });
@@ -65,7 +64,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
           {buttonVisible && (
             <Button 
               onClick={GetSuggestions}
-              disabled={!apikey} // Disable if API key is empty
+              disabled={!apikey}
             >
               Get Recommendations from Answers
             </Button>
@@ -79,10 +78,8 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
           )}
         </section>
 
-        {/* Render rest of the content conditionally */}
         {suggestions && (
           <>
-            {/* Additional sections if needed */}
           </>
         )}
       </main>
