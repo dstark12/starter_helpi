@@ -1310,11 +1310,11 @@ All files            |   15.54 |    23.52 |    20.4 |   13.88 |
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
   dquestions.tsx     |   84.21 |      100 |    62.5 |   82.35 | 37,71,81          
   dquestions2.tsx    |   58.33 |      100 |   55.55 |   52.38 | 43,54-57,62-65,84 
-  home.tsx           |       0 |      100 |       0 |       0 | 7-27              
+  home.tsx           |       0 |      100 |       0 |       0 | 7-28              
   results.tsx        |       0 |        0 |       0 |       0 | 7-65              
 ---------------------|---------|----------|---------|---------|-------------------
 Test Suites: 2 failed, 2 total
 Tests:       6 failed, 4 passed, 10 total
 Snapshots:   0 total
-Time:        4.567 s
+Time:        4.799 s
 Ran all test suites.
