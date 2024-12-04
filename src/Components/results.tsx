@@ -17,16 +17,9 @@ function GeneratePromptWithQuestions(questions: string[], answers: string[]): st
 export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2 }: 
   { apikey: string, bq: { id: number, questionText: string }[], ba: { [key: number]: string }, dq: { id: number, questionText: string }[], da: { [key: number]: string }, dq2: { id: number, questionText: string }[], da2: { [key: number]: string }, bfunc: (answers: { [key: number]: string }) => void, dfunc: (answers: { [key: number]: string }) => void, dfunc2: (answers: { [key: number]: string }) => void }): React.JSX.Element {
 
-  //const mainCareer = "Software Engineer";
-  //const otherCareers = ["Database Architect", "Mobile App Developer", "Information Security Analyst"];
   const [suggestions, setSuggestions] = useState<string>("");
   const [buttonVisible, setButtonVisible] = useState<boolean>(true);
   const [headerText, setHeaderText] = useState<string>("Career Quiz Results");
-  //const graphData = [
-  //  { label: 'Software Engineer', score: 80, questions: 7 },
-  //  { label: 'Data Scientist', score: 65, questions: 5 },
-  //  { label: 'Cybersecurity Analyst', score: 50, questions: 4 }
-  //];
 
   function GetSuggestions() {
     setSuggestions("Awaiting response...");
@@ -67,11 +60,15 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
         <h1>{headerText}</h1>
 
       <main className="main-content">
-        {/* Show button initially and only show results if suggestions are available */}
         <section className="career-section">
           <h2>AI-Generated Results</h2>
           {buttonVisible && (
-            <Button onClick={GetSuggestions}>Get Recommendations from Answers</Button>
+            <Button 
+              onClick={GetSuggestions}
+              disabled={!apikey} // Disable if API key is empty
+            >
+              Get Recommendations from Answers
+            </Button>
           )}
           {suggestions && (
             <>
@@ -85,40 +82,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
         {/* Render rest of the content conditionally */}
         {suggestions && (
           <>
-          {/*
-            <section className="career-section">     
-              
-              <h2>Your Ideal Career: <span>{mainCareer}</span></h2>
-              <p>Based on your quiz results, a <strong>{mainCareer}</strong> seems to be the best fit for you!</p>
-            </section>
-        */}
-        {/*
-            <section className="detailed-graphs-section">
-              <h3>Top 3 Careers And Why:</h3>
-              {graphData.map((data, index) => (
-                <div key={index} className="career-detail">
-                  <p>{data.questions} of your answers indicated interest in {data.label}.</p>
-                  <div className="detail-graph">
-                    <div
-                      className="detail-bar"
-                      style={{ width: `${data.questions * 15}%` }}
-                    >
-                      <span className="detail-bar-label">{data.questions} questions</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </section>
-
-            <section className="alternatives-section">
-              <h3>Even More Career Options:</h3>
-              <ul>
-                {otherCareers.map((career, index) => (
-                  <li key={index}>{career}</li>
-                ))}
-              </ul>
-            </section>
-                */}
+            {/* Additional sections if needed */}
           </>
         )}
       </main>
