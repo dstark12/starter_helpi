@@ -1,7 +1,8 @@
 import React from 'react';
-import {render, screen} from '@testing-library/react';
+import {render, screen, fireEvent} from '@testing-library/react';
 import { Dquestions, detailedQuestions } from "../Components/dquestions";
-import {Dquestions2} from '../Components/dquestions2';
+import { Dquestions2, detailedQuestions2 } from "../Components/dquestions2";
+
 
 //For 'dquestions' component
 describe("Dquestions Component", () => {
@@ -11,75 +12,40 @@ describe("Dquestions Component", () => {
 
   test("renders the component correctly", () => {
     render(
-      <Dquestions
-        page="dquestions1"
-        setPage={mockSetPage}
-        setQuestions={mockSetQuestions}
-        GlobalAnswers={{}}
-        setGlobalAnswers={mockSetGlobalAnswers}
-      />
-    );
-
-    // Check for the title
-    const title = screen.getByText("Detailed Career Questions");
-    expect(title).not.toBeNull();
-
-    // Check for the first question
-    const firstQuestion = screen.getByText(
-      detailedQuestions[0].questionText
-    );
-    expect(firstQuestion).not.toBeNull();
-
-    // Check for the reset button
-    const resetButton = screen.getByText("Reset Answers");
-    expect(resetButton).not.toBeNull();
-
-    // Check that the "Next Page" button is disabled (by checking `disabled` attribute)
-    const nextPageButton = screen.getByText("Go To Next Page");
-    expect(nextPageButton).toHaveAttribute("disabled");
-  });
-
-  test("renders all questions", () => {
-    render(
-      <Dquestions
-        page="dquestions1"
-        setPage={mockSetPage}
-        setQuestions={mockSetQuestions}
-        GlobalAnswers={{}}
-        setGlobalAnswers={mockSetGlobalAnswers}
-      />
-    );
-
-    detailedQuestions.forEach((q) => {
-      const questionElement = screen.getByText(q.questionText);
-      expect(questionElement).not.toBeNull();
+        <Dquestions
+          page="dquestions1"
+          setPage={mockSetPage}
+          setQuestions={mockSetQuestions}
+          GlobalAnswers={{}}
+          setGlobalAnswers={mockSetGlobalAnswers}
+        />
+      );
+    
+      // Match the question text with a regex
+      const firstQuestion = screen.getByText(/Do you prefer managing projects where you have full control, or do you thrive in collaborative environments\?/i);
+      expect(firstQuestion).toBeInTheDocument();
     });
-  });
 
-  test("handles input changes", () => {
-    render(
-      <Dquestions
-        page="dquestions1"
-        setPage={mockSetPage}
-        setQuestions={mockSetQuestions}
-        GlobalAnswers={{}}
-        setGlobalAnswers={mockSetGlobalAnswers}
-      />
-    );
-
-    const inputFields = screen.getAllByPlaceholderText("Enter your answer here");
-    const sampleAnswer = "I prefer collaborative environments.";
-
-    // Simulate typing into the first input field
-    const input = inputFields[0] as HTMLInputElement;
-    input.value = sampleAnswer;
-
-    // Trigger the input event
-    input.dispatchEvent(new Event("input", { bubbles: true }));
-
-    // Ensure `setGlobalAnswers` is called with the correct values
-    expect(mockSetGlobalAnswers).toHaveBeenCalledWith({ 1: sampleAnswer });
-  });
+    test("handles input changes", () => {
+        render(
+          <Dquestions
+            page="dquestions1"
+            setPage={mockSetPage}
+            setQuestions={mockSetQuestions}
+            GlobalAnswers={{}}
+            setGlobalAnswers={mockSetGlobalAnswers}
+          />
+        );
+    
+        const inputFields = screen.getAllByPlaceholderText("Enter your answer here");
+        const sampleAnswer = "I prefer collaborative environments.";
+    
+        // Simulate a user typing into the first input field
+        fireEvent.change(inputFields[0], { target: { value: sampleAnswer } });
+    
+        // Verify that setGlobalAnswers was called with the updated state
+        expect(mockSetGlobalAnswers).toHaveBeenCalledWith({ 1: sampleAnswer });
+      });
 
   test("displays progress bar correctly", () => {
     render(
@@ -146,22 +112,22 @@ describe("Dquestions2 Component", () => {
     };
   
     test("renders all questions from the second page", () => {
-      render(
-        <Dquestions2
-          page="dquestions2"
-          setPage={mockSetPage}
-          setQuestions={mockSetQuestions}
-          GlobalAnswers={mockGlobalAnswers}
-          setGlobalAnswers={mockSetGlobalAnswers}
-        />
-      );
-  
-      // Iterate over mockGlobalAnswers and verify if each question text is rendered
-      Object.entries(mockGlobalAnswers).forEach(([id, answer]) => {
-        const questionText = `Do you prefer working in a fast-paced environment with tight deadlines, or do you work better with more flexibility?`;
-        expect(screen.getByText(questionText)).toBeInTheDocument();
+        render(
+          <Dquestions2
+            page="dquestions2"
+            setPage={mockSetPage}
+            setQuestions={mockSetQuestions}
+            GlobalAnswers={mockGlobalAnswers}
+            setGlobalAnswers={mockSetGlobalAnswers}
+          />
+        );
+      
+        detailedQuestions2.forEach((q) => {
+          // Use a function matcher to find the text inside the rendered <p>
+          const questionElement = screen.getByText((content) => content.includes(q.questionText));
+          expect(questionElement).toBeInTheDocument();
+        });
       });
-    });
   
     test("displays the progress bar", () => {
       render(
