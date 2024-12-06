@@ -109,12 +109,12 @@ A worker process has failed to exit gracefully and has been force exited. This i
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |   16.24 |    23.52 |   23.52 |   14.83 |                   
+All files            |   16.32 |    23.52 |      24 |   14.91 |                   
  src                 |       0 |        0 |       0 |       0 |                   
   index.tsx          |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |    17.2 |    26.66 |   24.48 |   15.78 |                   
-  App.tsx            |       0 |        0 |       0 |       0 | 12-94             
+ src/Components      |   17.29 |    26.66 |      25 |   15.88 |                   
+  App.tsx            |       0 |        0 |       0 |       0 | 12-93             
   Themes.tsx         |       0 |      100 |     100 |       0 | 39-74             
   bquestions.tsx     |       0 |        0 |       0 |       0 | 9-106             
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
@@ -127,5 +127,5 @@ All files            |   16.24 |    23.52 |   23.52 |   14.83 |
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        4.339 s
+Time:        4.45 s
 Ran all test suites.
