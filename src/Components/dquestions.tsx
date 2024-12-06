@@ -59,6 +59,7 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
  {/* Progress Bar */}
  <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
+    role="progressbar"
     style={{
       width: `${progress}%`,
       backgroundColor: 'green',
@@ -70,19 +71,22 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
     {/*Reset Button*/}
     <button style={{margin: "0 0 25px"}} onClick={()=>{setAnswers({})}}>Reset Answers</button>
 
-     <div className="question-list">
-       {detailedQuestions.map((q, index) => (
-         <div key={q.id} className="question-item">
-           <p>{index + 1}. {q.questionText}</p>
-           <input
-             type="text"
-             placeholder="Enter your answer here"
-             value={answers[q.id] || ''}
-             onChange={(e) => handleAnswerChange(q.id, e.target.value)}
-           />
-         </div>
-       ))}
-     </div>
+    <div className="question-list">
+  {detailedQuestions.map((q, index) => (
+    <div key={q.id} className="question-item">
+      <p data-testid={`question-${q.id}`}>
+        {index + 1}. {q.questionText}
+      </p>
+      <input
+        type="text"
+        placeholder="Enter your answer here"
+        value={answers[q.id] || ''}
+        onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+      />
+    </div>
+  ))}
+</div>
+
      {allQuestionsAnswered && <p>All questions completed! You can now go to next page!.</p>}
      {/* Button is disabled if not all questions are answered */}
      <button onClick={getNextPage} disabled={!allQuestionsAnswered}>
