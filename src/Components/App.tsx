@@ -91,7 +91,6 @@ function App() {
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
-          <Button onClick={() => setPage("results")}>Results</Button> {/* Add Results Button */}
         </span>
         {page === "home" ? <Home setPage={setPage}/> : null}
         {page === "bquestions" ? <Bquestions setPage={setPage} setQuestions={setBq} GlobalAnswers={banswers} setGlobalAnswers={setBanswers}/> : null}
