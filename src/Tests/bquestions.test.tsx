@@ -17,7 +17,6 @@ describe("Bquestions Component", () => {
       />
     );
 
-    // Check for the title
     const title = screen.getByText("Detailed Business Questions");
     expect(title).toBeInTheDocument();
 
