@@ -8,7 +8,7 @@ export function Home({ setPage }: { setPage: (page: string) => void }): React.JS
         <div className="home-page">
         <div className="container">
             <header>
-                <h1>Super Fun Career Quiz</h1>
+                <h1>Career Quest</h1>
                 <img style={{width: "75%", aspectRatio: 1}} src={logo} alt="Logo" className="logo" />
             </header>
             <div className="button-container-wrapper">
