@@ -117,6 +117,6 @@ button:hover {
 
     .left-button, .right-button {
         width: 80%; /* Reduce button width */
-        margin-bottom: 20px; /* Add space between stacked buttons */
+        margin-bottom: 30px; /* Add space between stacked buttons */
     }
 }
