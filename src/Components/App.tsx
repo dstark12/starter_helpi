@@ -85,20 +85,28 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <BrowserView>
-      <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
-      </BrowserView>
+
       <MobileView>
       <div style={{padding: '20px', marginBottom: '10px'}}>
       <Button style={{position: 'absolute', 'top': 0, 'right': 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
       <span> </span>
       </div>
-      </MobileView>
-        <span>
+      <span>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
           <Button onClick={() => setPage("dquestions")}>Detailed Questions</Button>
-        </span>
+      </span>
+      </MobileView>
+
+      <BrowserView>
+      <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
+      <span>
+          <Button style={{margin: '1px'}} onClick={() => setPage("home")}>Home</Button>
+          <Button style={{margin: '1px'}} onClick={() => setPage("bquestions")}>Basic Questions</Button>
+          <Button style={{margin: '1px'}} onClick={() => setPage("dquestions")}>Detailed Questions</Button>
+      </span>
+      </BrowserView>
+        
         {page === "home" ? <Home setPage={setPage}/> : null}
         {page === "bquestions" ? <Bquestions setPage={setPage} setQuestions={setBq} GlobalAnswers={banswers} setGlobalAnswers={setBanswers}/> : null}
         {page === "dquestions" ? <Dquestions page={page} setPage={setPage} setQuestions={setDq} GlobalAnswers={danswers} setGlobalAnswers={setDanswers}/> : null}
