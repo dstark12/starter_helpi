@@ -7,7 +7,7 @@ import { Dquestions } from './dquestions';
 import { Dquestions2 } from './dquestions2';
 import { Results } from './results'; // Add Results import
 import { ColorTheme, light_theme, dark_theme } from './Themes';
-import { MobileView } from 'react-device-detect';
+import { MobileView, BrowserView } from 'react-device-detect';
 
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -85,8 +85,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <BrowserView>
       <Button style={{position: "absolute", top: 0, right: 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
-      <MobileView> <span style={{margin: "50px"}}> </span> </MobileView>
+      </BrowserView>
+      <MobileView>
+      <div style={{padding: '20px', marginBottom: '10px'}}>
+      <Button style={{position: 'absolute', 'top': 0, 'right': 0, margin: '20px'}}onClick={toggleTheme}>Toggle Theme</Button>
+      <span> </span>
+      </div>
+      </MobileView>
         <span>
           <Button onClick={() => setPage("home")}>Home</Button>
           <Button onClick={() => setPage("bquestions")}>Basic Questions</Button>
