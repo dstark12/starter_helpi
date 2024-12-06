@@ -109,23 +109,23 @@ A worker process has failed to exit gracefully and has been force exited. This i
 ---------------------|---------|----------|---------|---------|-------------------
 File                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ---------------------|---------|----------|---------|---------|-------------------
-All files            |   16.58 |    23.52 |   24.48 |      15 |                   
+All files            |   16.24 |    23.52 |   23.52 |   14.83 |                   
  src                 |       0 |        0 |       0 |       0 |                   
   index.tsx          |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts |       0 |        0 |       0 |       0 | 3-10              
- src/Components      |   17.58 |    26.66 |   25.53 |   15.97 |                   
+ src/Components      |    17.2 |    26.66 |   24.48 |   15.78 |                   
   App.tsx            |       0 |        0 |       0 |       0 | 12-94             
   Themes.tsx         |       0 |      100 |     100 |       0 | 39-74             
   bquestions.tsx     |       0 |        0 |       0 |       0 | 9-106             
   chat.tsx           |       0 |      100 |       0 |       0 | 4-44              
   dquestions.tsx     |   94.73 |      100 |    87.5 |   94.11 | 72                
   dquestions2.tsx    |   58.33 |      100 |   55.55 |   52.38 | 43,54-57,62-65,85 
-  home.tsx           |       0 |      100 |       0 |       0 | 7-28              
+  home.tsx           |       0 |      100 |       0 |       0 | 8-50              
   results.tsx        |       0 |        0 |       0 |       0 | 7-57              
 ---------------------|---------|----------|---------|---------|-------------------
 
 Test Suites: 1 failed, 1 passed, 2 total
 Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        4.383 s
+Time:        4.339 s
 Ran all test suites.
