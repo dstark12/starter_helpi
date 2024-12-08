@@ -191,3 +191,5 @@ describe("Dquestions2 Component", () => {
       expect(previousButton).toBeInTheDocument();
     });
   });
+
+  //Chat gpt was used thoroughly throughout these tests, responsible for each render statement
