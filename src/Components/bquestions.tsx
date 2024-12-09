@@ -65,6 +65,7 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
       {/* Progress bar */}
       <div style={{ width: '100%', transition: 'all 0.3s ease;', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
         <div
+          role="progressbar"
           style={{
             width: `${progress}%`,
             backgroundColor: 'var(--progress-bar-color)',
