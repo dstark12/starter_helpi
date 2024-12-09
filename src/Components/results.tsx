@@ -54,6 +54,7 @@ export function Results({ apikey, bq, ba, dq, da, dq2, da2, bfunc, dfunc, dfunc2
     });
   }
 
+  // This section was Chat GPT Generated, we used it to generate a base results page with title page and header, and then edited the CSS ourselves to fix format, sizing, color, etc.
   return (
     <div className="results-container">
         <h1>{headerText}</h1>
