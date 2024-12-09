@@ -1,10 +1,8 @@
-import React from 'react';
 import {render, screen, fireEvent} from '@testing-library/react';
 import { Dquestions, detailedQuestions } from "../Components/dquestions";
 import { Dquestions2, detailedQuestions2 } from "../Components/dquestions2";
 
 
-//For 'dquestions' component
 describe("Dquestions Component", () => {
   const mockSetPage = jest.fn();
   const mockSetQuestions = jest.fn();
@@ -21,7 +19,6 @@ describe("Dquestions Component", () => {
         />
       );
     
-      // Match the question text with a regex
       const firstQuestion = screen.getByText(/Do you prefer managing projects where you have full control, or do you thrive in collaborative environments\?/i);
       expect(firstQuestion).toBeInTheDocument();
     });
@@ -40,10 +37,8 @@ describe("Dquestions Component", () => {
         const inputFields = screen.getAllByPlaceholderText("Enter your answer here");
         const sampleAnswer = "I prefer collaborative environments.";
     
-        // Simulate a user typing into the first input field
         fireEvent.change(inputFields[0], { target: { value: sampleAnswer } });
     
-        // Verify that setGlobalAnswers was called with the updated state
         expect(mockSetGlobalAnswers).toHaveBeenCalledWith({ 1: sampleAnswer });
       });
 
@@ -59,7 +54,7 @@ describe("Dquestions Component", () => {
     );
 
     const progressBar = screen.getByRole("progressbar");
-    expect(progressBar.style.width).toBe("10%"); // Assuming 10% progress for 1 answered question
+    expect(progressBar.style.width).toBe("10%"); 
   });
 
   test("navigates to the next page", () => {
@@ -82,22 +77,18 @@ describe("Dquestions Component", () => {
     const nextPageButton = screen.getByText("Go To Next Page");
     expect(nextPageButton).not.toHaveAttribute("disabled");
 
-    // Simulate button click
     nextPageButton.dispatchEvent(new MouseEvent("click", { bubbles: true }));
 
-    // Ensure correct navigation and state updates
     expect(mockSetPage).toHaveBeenCalledWith("dquestions2");
     expect(mockSetQuestions).toHaveBeenCalledWith(detailedQuestions);
   });
 });
 
-//
 describe("Dquestions2 Component", () => {
     const mockSetPage = jest.fn();
     const mockSetQuestions = jest.fn();
     const mockSetGlobalAnswers = jest.fn();
   
-    // Mock answers
     const mockGlobalAnswers = {
       11: "Sample answer 1",
       12: "Sample answer 2",
@@ -123,7 +114,7 @@ describe("Dquestions2 Component", () => {
         );
       
         detailedQuestions2.forEach((q) => {
-          // Use a function matcher to find the text inside the rendered <p>
+
           const questionElement = screen.getByText((content) => content.includes(q.questionText));
           expect(questionElement).toBeInTheDocument();
         });
@@ -140,7 +131,7 @@ describe("Dquestions2 Component", () => {
         />
       );
   
-      // Verify if progress bar is rendered
+
       const progressBar = screen.getByRole("progressbar");
       expect(progressBar).toBeInTheDocument();
     });
@@ -151,7 +142,7 @@ describe("Dquestions2 Component", () => {
           page="dquestions2"
           setPage={mockSetPage}
           setQuestions={mockSetQuestions}
-          GlobalAnswers={{}}  // No answers are provided
+          GlobalAnswers={{}} 
           setGlobalAnswers={mockSetGlobalAnswers}
         />
       );
@@ -166,7 +157,7 @@ describe("Dquestions2 Component", () => {
           page="dquestions2"
           setPage={mockSetPage}
           setQuestions={mockSetQuestions}
-          GlobalAnswers={mockGlobalAnswers}  // All answers are provided
+          GlobalAnswers={mockGlobalAnswers}
           setGlobalAnswers={mockSetGlobalAnswers}
         />
       );
@@ -186,10 +177,7 @@ describe("Dquestions2 Component", () => {
         />
       );
   
-      // Check if "Previous Page" button is rendered
       const previousButton = screen.getByText("Previous Page");
       expect(previousButton).toBeInTheDocument();
     });
   });
-
-  //Chat gpt was used thoroughly throughout these tests, responsible for each render statement

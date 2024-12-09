@@ -31,22 +31,16 @@ interface Dquestions2Props {
 
 
 export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlobalAnswers }: Dquestions2Props): React.JSX.Element {
- //const [answers, setAnswers] = useState<{ [key: number]: string }>({});
  const [answers, setAnswers] = [GlobalAnswers, setGlobalAnswers];
 
 
  const handleAnswerChange = (id: number) => (e: React.ChangeEvent<HTMLInputElement>) => {
-   /*setAnswers((prevAnswers) => ({
-     ...prevAnswers,
-     [id]: e.target.value,
-   }));*/
    setAnswers({...answers, [id]: e.target.value});
  };
  const answeredQuestions = detailedQuestions2.filter((q) => answers[q.id]?.trim()).length;
  const totalQuestions = detailedQuestions2.length;
  const progress = (answeredQuestions / totalQuestions) * 100;
 
- // Check if all questions are answered
  const allQuestionsAnswered = detailedQuestions2.every((q) => answers[q.id]?.trim());
 
 
@@ -69,7 +63,6 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
  return (
    <div className="detailed-question-page">
      <h1>Detailed Career Questions - Page 2</h1>
-    {/* Progress Bar */}
     <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
     role="progressbar"
@@ -81,9 +74,7 @@ export function Dquestions2({ page, setPage, setQuestions, GlobalAnswers, setGlo
     }}
   ></div>
 </div>
-    {/*Reset Button*/}
     <button style={{margin: "0 0 25px"}} onClick={()=>{setAnswers({})}}>Reset Answers</button>
-
      <div className="question-list">
        {detailedQuestions2.map((q, index) => (
          <div key={q.id} className="question-item">

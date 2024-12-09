@@ -5,7 +5,7 @@ import { Home } from './home';
 import { Bquestions } from './bquestions';
 import { Dquestions } from './dquestions';
 import { Dquestions2 } from './dquestions2';
-import { Results } from './results'; // Add Results import
+import { Results } from './results';
 import { ColorTheme, light_theme, dark_theme } from './Themes';
 import { MobileView, BrowserView } from 'react-device-detect';
 
