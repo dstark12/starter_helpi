@@ -20,8 +20,6 @@ export const questions: Question[] = [
 export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswers}: 
   {setPage: (page: string) => void, setQuestions: (questions: {id:number, questionText: string}[]) => void, GlobalAnswers: {[key: number]: string}, setGlobalAnswers: (answers: {[key: number]: string}) => void}): React.JSX.Element {
   
-
-  //const [answers, setAnswers] = useState<{ [key: number]: string }>({});
   const [answers, setAnswers] = [GlobalAnswers, setGlobalAnswers];
 
   const handleAnswerClick = (id: number, answer: string) => {
@@ -29,40 +27,32 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
       ...answers,
       [id]: answer,
     });
-    //setGlobalAnswers({...GlobalAnswers, [id]: answer});
   };
 
   const getButtonStyle = (questionId: number, answer: string) => {
     if (answers[questionId] === answer) {
-      return { backgroundColor: "var(--question-button-color-selected)", color: 'var(--question-button-text-color-selected)' }; // Change background to blue if clicked
+      return { backgroundColor: "var(--question-button-color-selected)", color: 'var(--question-button-text-color-selected)' };
     }
-    return { }; // Default style
+    return { }; 
   };
 
   const getResults = () => {
-
-    // This can be where results are processed or API interaction can take place
     setQuestions(questions);
     setGlobalAnswers(answers);
     console.log('User answers:', answers);
     setPage('results');
     window.scrollTo(0,0);
-    // Example: You can integrate GPT or further process the answers here
-
   };
 
-  // Calculate progress
   const answeredQuestions = Object.keys(answers).length;
   const totalQuestions = questions.length;
   const progress = (answeredQuestions / totalQuestions) * 100;
 
-  //if(answers !== GlobalAnswers){setAnswers(GlobalAnswers);}
 
   return (
     <div className="basic-question-page">
       <h1>Basic Career Questions</h1>
       <p>This quiz helps you explore your career interests by asking a series of multiple-choice questions about your preferences and working style. You will be presented with questions covering topics like technology, creativity, collaboration, and work-life balance. By selecting your answers, you'll gain insights into potential career paths that align with your strengths and preferences. Simply choose from 'Yes', 'No', or 'I Don't Know' for each question, and see how your responses shape your career profile!</p>
-      {/* Progress bar */}
       <div style={{ width: '100%', transition: 'all 0.3s ease;', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
         <div
           role="progressbar"
@@ -75,7 +65,6 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
         ></div>
       </div>
 
-      {/* Display progress in text */}
       <p>{answeredQuestions}/{totalQuestions} questions answered</p>
 
       <button style={{margin: "0 0 25px"}} onClick={()=>{setAnswers({})}}>Reset Answers</button>
@@ -97,7 +86,6 @@ export function Bquestions({setPage, setQuestions, GlobalAnswers, setGlobalAnswe
         ))}
       </div>
 
-      {/* Notification when all questions are answered */}
       {answeredQuestions === totalQuestions && <p>All questions completed! You can now submit or proceed.</p>}
 
       <button onClick={getResults} disabled={answeredQuestions !== totalQuestions}>

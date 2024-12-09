@@ -23,24 +23,17 @@ export const detailedQuestions: DetailedQuestion[] = [
 
 export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlobalAnswers }:
  { page: string, setPage: (page: string) => void, setQuestions: (questions: DetailedQuestion[]) => void, GlobalAnswers: {[key: number]: string}, setGlobalAnswers: (answers: { [key: number]: string }) => void }): React.JSX.Element {
- //const [answers, setAnswers] = useState<{ [key: number]: string }>({});
  const [answers, setAnswers] = [GlobalAnswers, setGlobalAnswers];
 
 
  const handleAnswerChange = (id: number, answer: string) => {
-  /*
-   setAnswers((prevAnswers) => ({
-     ...prevAnswers,
-     [id]: answer,
-   }));
-   */
+
   setAnswers({...answers, [id]: answer});
  };
  const answeredQuestions = detailedQuestions.filter((q) => answers[q.id]?.trim()).length;
  const totalQuestions = detailedQuestions.length;
  const progress = (answeredQuestions / totalQuestions) * 100;
 
- // Check if all questions are answered
  const allQuestionsAnswered = detailedQuestions.every((q) => answers[q.id]?.trim());
 
 
@@ -56,7 +49,6 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
    <div className="detailed-question-page">
      <h1>Detailed Career Questions</h1>
      <p>This isn't your typical multiple-choice quiz! You'll be asked a series of open-ended, detailed questions to encourage thoughtful, personalized responses. Each question includes a textbox input, so you can write freely and fully express your ideas, goals, and experiences.</p>
- {/* Progress Bar */}
  <div style={{ width: '100%', backgroundColor: 'var(--progress-bar-background)', height: '20px', borderRadius: '10px', marginBottom: '20px' }}>
   <div
     role="progressbar"
@@ -68,7 +60,6 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
     }}
   ></div>
 </div>
-    {/*Reset Button*/}
     <button style={{margin: "0 0 25px"}} onClick={()=>{setAnswers({})}}>Reset Answers</button>
 
     <div className="question-list">
@@ -88,7 +79,6 @@ export function Dquestions({ page, setPage, setQuestions, GlobalAnswers, setGlob
 </div>
 
      {allQuestionsAnswered && <p>All questions completed! You can now go to next page!.</p>}
-     {/* Button is disabled if not all questions are answered */}
      <button onClick={getNextPage} disabled={!allQuestionsAnswered}>
        Go To Next Page
      </button>
